@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Getting Git"
+date: 2014-08-05 11:35:53 -0400
+comments: true
+categories:
+---
+Git is glorious. <br>
+I once thought it was annoying, countless <code> git add . </code> followed by<br>
+<code> git commit -m "why am i doing this?" </code> <br> <br>
+My initial understanding of git was limited. I understood it was a VCM (Version
+  Control Manager), but didn't really grasp how powerful it was to backup code. <br>
+
+First, the difference between Git and GitHub. Git is what is used on your machine, it
+is a tool to decide what files need to be added (staged) and commited (ready to be uploaded).
+Then git connects to GitHub as a centralized place to store all of the files that are commited
+and ready to be uploaded. <br>
+<br> Boom, magic is born. <br><br>
+It's a beautiful combination. To be able to look at your code from any machine, always
+be able to clone down copies or look what you did last week and figure out why you did it.
+When others are added to the equation is when using GitHub becomes a beast. Imagine it,
+you're working on a project (hopefully a Rails project) and you've just finished implementing
+a new gem that you found. Your partner (who so happens to be the front end developer) knows
+that you have been working on the gem, and that finishing would mean he would only need to make
+a couple of tweeks to finish the project. Through github all that is needed is for you to add,
+commit, and push your code while your parther pulls it down. <br>
+BOOM<br>
+If that's not magic idk what is. <br>
+Once again, git is glorious. If you're starting out and are hesitant about using git,
+just keep in mind that git will be your best friend. Especially when you
+accidentally <code> rm -rf </code> (don't do this on files/folders if you don't know what it is)
+a few files and you think the world is about to end (it happens).<br><br>
+Look up tutorials, watch videos, and ask people who have been using it.
+Getting git is an extremely powerful tool any developer can have, and I am very
+glad that I took the time to understand its power.
