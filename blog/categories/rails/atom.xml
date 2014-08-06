@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-06T10:39:57-04:00</updated>
+  <updated>2014-08-06T16:21:01-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Motivation]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/06/motivation/"/>
+    <updated>2014-08-06T14:32:11-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/06/motivation</id>
+    <content type="html"><![CDATA[<p>Sometimes it is difficult to find the necessary drive to complete tasks.
+That doesn&rsquo;t happen to me when I code.
+When I get started with an idea or a project, I&rsquo;m fully immersed.
+I like to think of it as a coding high.
+When I&rsquo;m in the zone, writing remarkably precise and efficient code.
+It&rsquo;s a wonderful and beautiful thing.<!-- more --><br></p>
+
+<p>Coding gives me energy.
+I find that by coding, I am able to find things that would seem otherwise mundane, fun.
+The thrill of going beyond my limits and learning a new skill.
+It just puts me in a good mood.<br></p>
+
+<p>I find coding to be extraordinarily soothing.
+There is nothing quite like being lost in a piece of code.
+When the world falls silent and all that remains are my code and me.
+It&rsquo;s a zen like moment, and I have come to appreciate it more and more.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How Ruby Chose Me]]></title>
