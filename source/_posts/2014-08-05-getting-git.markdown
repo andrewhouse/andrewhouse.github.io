@@ -4,7 +4,9 @@ title: "Getting Git"
 tagline: "Glorious Git"
 date: 2014-08-05 11:35:53 -0400
 comments: true
-categories:
+categories:['git', 'ruby', 'rails']
+keywords: "git, ruby, andrew, house, rails, junior, developer"
+
 ---
 Git is glorious. <br>
 I once thought it was annoying, countless <code> git add . </code> followed by<br>

@@ -3,7 +3,8 @@ layout: post
 title: "Pry-ing Apart Code"
 date: 2014-08-05 20:36:37 -0400
 comments: true
-categories:
+categories:['ruby', 'pry']
+keywords: "pry, ruby, andrew, house, rails, junior, developer"
 ---
 
 I like to think of writing code similar to designing puzzles.
@@ -23,7 +24,7 @@ For me, the most powerful feature of pry is <code>binding.pry</code>.
 When I'm wanting to find out what a particular piece of code is doing
 at a specific point in time, I drop <code>binding.pry</code> at that specific
 line. Then when I run the code, pry automatically opens and I'm given the ability
-to check specific states of code, even during complicated loops. 
+to check specific states of code, even during complicated loops.
 In addition, I like to use the pry-byebug gem to be able to go line by line,
 continuously being able to check code and debug/figure out whats going on.<br><br>
 As a Junior Dev I find these practices to be crucial.
