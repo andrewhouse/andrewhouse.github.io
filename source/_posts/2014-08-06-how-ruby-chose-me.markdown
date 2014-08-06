@@ -26,7 +26,7 @@ I remember seeing a Ruby course when I was going over the Javascript codeacademy
 course.
 There I went, headfirst into Ruby without a clue of what it was.<br><br>
 I thought Ruby was joking with me.
-Hardly any ()'s and only {}'s with hashes. Are you serious?
+Hardly any ()'s and only {}'s with hashes and blocks. Are you serious?
 It was fluid, less verbose, and object oriented.
 I fell head over heels.
 From that point on I focused mainly on Ruby and learning how to properly structure
@@ -42,4 +42,4 @@ Currently, I am attending the IronYard in Atlanta, GA to learn more
 advanced Ruby and Rails.
 By the end of this I feel I will be absolutely be prepared to be a critical
 asset to any team. <br><br>
-I have Ruby to thank for all of it. 
+I have Ruby to thank for all of it.
