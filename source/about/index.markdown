@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-I am a Junior Rails Engineer located in Atlanta, GA.
+My name is Andrew House and I am a Junior Rails Engineer located in Atlanta, GA.
 Currently, I am enrolled in the Rails Engineering course at The IronYard.
 Being an incredibly passionate developer,
-I am committing this blog to showcase my experience and work ethic. 
+I am committing this blog to showcase my experience and work ethic.
