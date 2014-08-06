@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | House of Rails]]></title>
+  <link href="http://andrewhouse.github.io/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://andrewhouse.github.io/"/>
+  <updated>2014-08-06T09:05:54-04:00</updated>
+  <id>http://andrewhouse.github.io/</id>
+  <author>
+    <name><![CDATA[Andrew House]]></name>
+    <email><![CDATA[andrewhouse621@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How Ruby Chose Me]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/06/how-ruby-chose-me/"/>
+    <updated>2014-08-06T08:49:11-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/06/how-ruby-chose-me</id>
+    <content type="html"><![CDATA[<p>Javascript was my first programming language.
+While it was fun to use, it was also very syntax heavy.
+The amount of ()&rsquo;s and {}&rsquo;s pretty much drove me insane.  <br>
+After learning the basics of Javascript I started to look for other
+languages that would be relevant to my goal of web development.
+I had come to learn how Javascript was incredibly important making web
+pages function, and I wanted to learn the skills to drive the essential
+pieces that run in the background. That&rsquo;s right, I wanted to take a look
+into the back-end. <br></p>
+
+<!-- more -->
+
+
+<p>After reasearching for countless days I finally stumbled upon Ruby on Rails.
+It seemed that Rails was a great way to start looking into the backend.
+However, the majority of places I saw said to absolutly not start Rails
+until I was fluent in Ruby.
+Then a lightbulb moment came.
+I remember seeing a Ruby course when I was going over the Javascript codeacademy
+course.
+There I went, headfirst into Ruby without a clue of what it was.<br><br>
+I thought Ruby was joking with me.
+Hardly any ()&rsquo;s and only {}&rsquo;s with hashes. Are you serious?
+It was fluid, less verbose, and object oriented.
+I fell head over heels.
+From that point on I focused mainly on Ruby and learning how to properly structure
+methods, classes, and everything I could.
+I&rsquo;ve got to the point to where just getting something to work the way I want to isn&rsquo;t
+enought, I need to have it be in best practice.
+Using proper standards and conventions adopted by professionals.
+Ruby is a ton of fun.
+I&rsquo;m incredibly passionate about it and it has made me a more passionate developer.<br><br>
+Ruby pulled me into it&rsquo;s world and I couldn&rsquo;t be happier.
+From there I went to learn basic Rails and make a few web apps of my own.
+Currently, I am attending the IronYard in Atlanta, GA to learn more
+advanced Ruby and Rails.
+By the end of this I feel I will be absolutely be prepared to be a critical
+asset to any team. <br><br>
+I have Ruby to thank for all of it.</p>
+]]></content>
+  </entry>
+  
+</feed>
