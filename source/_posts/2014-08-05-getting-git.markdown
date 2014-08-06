@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Getting Git"
+tagline: "Glorious Git"
 date: 2014-08-05 11:35:53 -0400
 comments: true
 categories:
