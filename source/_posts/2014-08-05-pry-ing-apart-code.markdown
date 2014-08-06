@@ -17,6 +17,7 @@ nothing about, and pick it apart piece by piece.
 Originally, I used mass amounts of puts and tabbing back and forth between
 my editor and irb. During my first day at the IronYard my Instructor James
 introduced me to Pry. <br><br>
+<!-- more -->
 Let me say, pry is a dream. <br><br>
 Pry is pretty sweet because I'm able to use pry in place of irb.
 It also uses a colorized

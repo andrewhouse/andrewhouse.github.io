@@ -14,6 +14,7 @@ I once thought it was annoying, countless <code> git add . </code> followed by<b
 <code> git commit -m "why am i doing this?" </code> <br> <br>
 My initial understanding of git was limited. I understood it was a VCM (Version
   Control Manager), but didn't really grasp how powerful it was to backup code. <br>
+  <!-- more -->
 
 First, the difference between Git and GitHub. Git is what is used on your machine, it
 is a tool to decide what files need to be added (staged) and commited (ready to be uploaded).
