@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-05T22:12:55-04:00</updated>
+  <updated>2014-08-05T23:04:21-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -14,9 +14,9 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Pry-ing Apart Code]]></title>
+    <title type="html"><![CDATA[Pry Ing Apart Code]]></title>
     <link href="http://andrewhouse.github.io/blog/2014/08/05/pry-ing-apart-code/"/>
-    <updated>2014-08-05T20:36:37-04:00</updated>
+    <updated>2014-08-05T00:00:00-04:00</updated>
     <id>http://andrewhouse.github.io/blog/2014/08/05/pry-ing-apart-code</id>
     <content type="html"><![CDATA[<p>I like to think of writing code similar to designing puzzles.
 The more simple the code, the easier to dissect each individual element and
@@ -26,8 +26,12 @@ One of my favorite things to do is to find a method on ruby-docs that I know
 nothing about, and pick it apart piece by piece.
 Originally, I used mass amounts of puts and tabbing back and forth between
 my editor and irb. During my first day at the IronYard my Instructor James
-introduced me to Pry. <br><br>
-Let me say, pry is a dream. <br><br>
+introduced me to Pry. <br><br></p>
+
+<!-- more -->
+
+
+<p>Let me say, pry is a dream. <br><br>
 Pry is pretty sweet because I&rsquo;m able to use pry in place of irb.
 It also uses a colorized
 text to help me instantly recognize what the type the presented code is.
@@ -47,13 +51,14 @@ dissecting the code, I can pull myself through even the hardest bits of code.</p
   <entry>
     <title type="html"><![CDATA[Getting Git]]></title>
     <link href="http://andrewhouse.github.io/blog/2014/08/05/getting-git/"/>
-    <updated>2014-08-05T11:35:53-04:00</updated>
+    <updated>2014-08-05T00:00:00-04:00</updated>
     <id>http://andrewhouse.github.io/blog/2014/08/05/getting-git</id>
     <content type="html"><![CDATA[<p>Git is glorious. <br>
 I once thought it was annoying, countless <code> git add . </code> followed by<br>
 <code> git commit -m &ldquo;why am i doing this?&rdquo; </code> <br> <br>
 My initial understanding of git was limited. I understood it was a VCM (Version
-  Control Manager), but didn&rsquo;t really grasp how powerful it was to backup code. <br></p>
+  Control Manager), but didn&rsquo;t really grasp how powerful it was to backup code. <br>
+  <!-- more --></p>
 
 <p>First, the difference between Git and GitHub. Git is what is used on your machine, it
 is a tool to decide what files need to be added (staged) and commited (ready to be uploaded).
