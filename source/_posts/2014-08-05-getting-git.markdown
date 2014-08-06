@@ -6,6 +6,7 @@ date: 2014-08-05 11:35:53 -0400
 comments: true
 categories:['git', 'ruby', 'rails']
 keywords: "git, ruby, andrew, house, rails, junior, developer"
+description: "Git perspective from a Junior Rails Developer"
 
 ---
 Git is glorious. <br>

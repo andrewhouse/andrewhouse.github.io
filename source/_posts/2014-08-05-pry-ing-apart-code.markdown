@@ -5,6 +5,7 @@ date: 2014-08-05 20:36:37 -0400
 comments: true
 categories:['ruby', 'pry']
 keywords: "pry, ruby, andrew, house, rails, junior, developer"
+description: "Using Pry with Ruby"
 ---
 
 I like to think of writing code similar to designing puzzles.
