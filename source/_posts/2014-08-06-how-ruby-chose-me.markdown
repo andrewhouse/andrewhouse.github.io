@@ -17,7 +17,7 @@ pages function, and I wanted to learn the skills to drive the essential
 pieces that run in the background. That's right, I wanted to take a look
 into the back-end. <br>
 <!-- more -->
-After reasearching for countless days I finally stumbled upon Ruby on Rails.
+After researching for countless days I finally stumbled upon Ruby on Rails.
 It seemed that Rails was a great way to start looking into the backend.
 However, the majority of places I saw said to absolutly not start Rails
 until I was fluent in Ruby.
