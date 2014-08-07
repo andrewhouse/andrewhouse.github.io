@@ -4,7 +4,7 @@ title: "Motivation "
 date: 2014-08-06 14:32:11 -0400
 comments: true
 categories: ['ruby', 'rails']
-keywords: ruby, rails, junior, developer, dev, engineer'
+keywords: ruby, rails, junior, developer, dev, engineer
 description: "Motivation for Coding"
 ---
 
