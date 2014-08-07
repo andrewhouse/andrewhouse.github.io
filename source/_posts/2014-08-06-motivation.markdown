@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Motivation"
+title: "Motivation "
 date: 2014-08-06 14:32:11 -0400
 comments: true
 categories: ['ruby', 'rails']
