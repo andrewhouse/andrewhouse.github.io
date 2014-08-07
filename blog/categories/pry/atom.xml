@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Pry | House of Rails]]></title>
+  <link href="http://andrewhouse.github.io/blog/categories/pry/atom.xml" rel="self"/>
+  <link href="http://andrewhouse.github.io/"/>
+  <updated>2014-08-07T18:55:54-04:00</updated>
+  <id>http://andrewhouse.github.io/</id>
+  <author>
+    <name><![CDATA[Andrew House]]></name>
+    <email><![CDATA[andrewhouse621@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Pry-ing Apart Code]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/05/pry-ing-apart-code/"/>
+    <updated>2014-08-05T20:36:37-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/05/pry-ing-apart-code</id>
+    <content type="html"><![CDATA[<p>I like to think of writing code similar to designing puzzles.
+The more simple the code, the easier to dissect each individual element and
+know the code with exact precision.
+However, I have a fondness for diving deep into code I don&rsquo;t understand.
+One of my favorite things to do is to find a method on ruby-docs that I know
+nothing about, and pick it apart piece by piece.
+Originally, I used mass amounts of puts and tabbing back and forth between
+my editor and irb. During my first day at the IronYard my Instructor James
+introduced me to Pry. <br><br></p>
+
+<!-- more -->
+
+
+<p>Let me say, pry is a dream. <br><br>
+Pry is pretty sweet because I&rsquo;m able to use pry in place of irb.
+It also uses a colorized
+text to help me instantly recognize what the type the presented code is.
+For me, the most powerful feature of pry is <code>binding.pry</code>.
+When I&rsquo;m wanting to find out what a particular piece of code is doing
+at a specific point in time, I drop <code>binding.pry</code> at that specific
+line. Then when I run the code, pry automatically opens and I&rsquo;m given the ability
+to check specific states of code, even during complicated loops.
+In addition, I like to use the pry-byebug gem to be able to go line by line,
+continuously being able to check code and debug/figure out whats going on.<br><br>
+As a Junior Dev I find these practices to be crucial.
+There are plenty of times I have no idea what I&rsquo;m doing, and by calmly
+dissecting the code, I can pull myself through even the hardest bits of code.</p>
+]]></content>
+  </entry>
+  
+</feed>
