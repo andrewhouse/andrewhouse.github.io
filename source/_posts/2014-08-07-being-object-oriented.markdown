@@ -3,7 +3,7 @@ layout: post
 title: "Being Object Oriented"
 date: 2014-08-07 10:02:29 -0400
 comments: true
-categories: ['ruby', 'rails']
+categories: ['Object Oriented Programming', 'rails']
 keywords: ruby, rails, junior, developer, dev, engineer, object oriented programming, oop
 description: "My Thoughts on Objected Oriented Programming"
 ---

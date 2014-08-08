@@ -3,7 +3,7 @@ layout: post
 title: "Motivation "
 date: 2014-08-06 14:32:11 -0400
 comments: true
-categories: ['ruby', 'rails']
+categories: ['coding']
 keywords: ruby, rails, junior, developer, dev, engineer
 description: "Motivation for Coding"
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Getting Git"
 date: 2014-08-05 11:35:53 -0400
 comments: true
-categories: ['git', 'ruby', 'rails']
+categories: ['git', 'github', 'bash']
 keywords: "git, ruby, andrew, house, rails, junior, developer"
 description: "Git perspective from a Junior Rails Developer"
 
