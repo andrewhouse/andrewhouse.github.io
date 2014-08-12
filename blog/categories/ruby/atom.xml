@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-08T23:45:21-04:00</updated>
+  <updated>2014-08-11T22:12:50-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sinatra Is Fun]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/11/sinatra-is-fun/"/>
+    <updated>2014-08-11T21:09:49-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/11/sinatra-is-fun</id>
+    <content type="html"><![CDATA[<p>I never really gave Sinatra a chance. <br>
+After reading articles after articles about how much better Rails is than
+Sinatra, I kind of swept it under the rug.
+I was sooooo wrong. <br>
+Sinatra is crazy light weight.
+Not as many bells, whistles, and not near as many headaches that come with Rails.
+It&rsquo;s simplistic, and I like that.
+Today I built <a href="http://andrew-sinatra.herokuapp.com/" title="Andrew House - Sinatra">a fun Sinatra app</a>
+and I had a really great time.
+I didn&rsquo;t try to make it too complicated, just trying to get used to haml and
+getting into the groove of how sinatra should feel.<br><br>
+I enjoyed how some of the magic that you take for granted in Rails is peeled
+apart in Sinatra.
+Making my own get/post requests and assigning routes was fun.
+I may be overplaying it, and I know how beneficial rails will be when I take
+on a larger app. But I have to say that now I will turn to sinatra for low
+level simplistic apps. Kudos to James for making us play with Sinatra.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Starting Over]]></title>
