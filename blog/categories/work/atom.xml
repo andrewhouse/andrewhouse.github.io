@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Work | House of Rails]]></title>
+  <link href="http://andrewhouse.github.io/blog/categories/work/atom.xml" rel="self"/>
+  <link href="http://andrewhouse.github.io/"/>
+  <updated>2014-08-11T22:12:50-04:00</updated>
+  <id>http://andrewhouse.github.io/</id>
+  <author>
+    <name><![CDATA[Andrew House]]></name>
+    <email><![CDATA[andrewhouse621@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[It's Electric]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/07/its-electric/"/>
+    <updated>2014-08-07T20:41:05-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/07/its-electric</id>
+    <content type="html"><![CDATA[<p>Electricity sure is annoying.<br>
+I end up using it most of the day.
+Whether it be by charging my laptop, heating up dinner, or watching tv.
+Electricity encompasses my life.<br>
+I&rsquo;m not saying I don&rsquo;t particularly like it, I just hate being dependent on
+factors I can&rsquo;t control.
+Currently the power is out at my apartment and I find it incredibly frustrating.
+The thought of how we will use power in the future gives me great joy.
+Affordable personal solar panels that are easy to diagnose? Yes please.
+I&rsquo;d even take a Soylent Green-esque treadmill that could power my apartment.<br><br>
+I know that I&rsquo;m overly dependent on electricity; my profession pretty much relies on it.
+If something happened and we went back to the stone age, I would be royally screwed.
+I do enjoy the era I was born into, and I look forward to the future and what
+humanity will come up with to fill the void for everyone.</p>
+]]></content>
+  </entry>
+  
+</feed>

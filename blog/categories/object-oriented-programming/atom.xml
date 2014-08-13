@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Object Oriented Programming | House of Rails]]></title>
+  <link href="http://andrewhouse.github.io/blog/categories/object-oriented-programming/atom.xml" rel="self"/>
+  <link href="http://andrewhouse.github.io/"/>
+  <updated>2014-08-11T22:12:50-04:00</updated>
+  <id>http://andrewhouse.github.io/</id>
+  <author>
+    <name><![CDATA[Andrew House]]></name>
+    <email><![CDATA[andrewhouse621@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Being Object Oriented]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/07/being-object-oriented/"/>
+    <updated>2014-08-07T10:02:29-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/07/being-object-oriented</id>
+    <content type="html"><![CDATA[<p>I love designing classes in an Object Oriented fashion.
+It gives a good feeling, like there aren&rsquo;t just a bunch of empty method.
+Each method belongs to something larger, each piece makes the whole complete.
+Object Oriented Programming (OOP) just makes sense to me.<!-- more --> <br><br>
+I like to think of classes as factories.
+Each factory pumps out a special part thats essential for the whole.
+The combination of all of the parts produced by the factories make a larger
+object.
+Attacking problems this way helps me pre-debug(defensive coding) the situation.
+Doing so makes it easier to debug, read, and understand.
+<br><br>
+Even when not specifically designing Object Oriented features, I still
+think of designing projects like objects.
+Let&rsquo;s say I&rsquo;m building a rails app.
+At the top level there is the MVC(model, view, controller).
+From there I break it down into pieces.
+Each view has several HTML &amp; CSS files.
+Each HTML can have partials, their own css stylings, etc.
+I keep breaking every piece down and down to make every little bit easier to
+understand.
+To me, designing this way helps maintain my sanity and keep organized.<br></p>
+
+<p>Objects are my friends, and designing in such a way isn&rsquo;t too hard of a task.
+Just be mindful of the roles each object plays, name them accordingly, and
+create the puzzle that holds all the pieces perfectly.</p>
+]]></content>
+  </entry>
+  
+</feed>

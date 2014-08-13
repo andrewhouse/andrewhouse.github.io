@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Css | House of Rails]]></title>
+  <link href="http://andrewhouse.github.io/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://andrewhouse.github.io/"/>
+  <updated>2014-08-11T22:12:50-04:00</updated>
+  <id>http://andrewhouse.github.io/</id>
+  <author>
+    <name><![CDATA[Andrew House]]></name>
+    <email><![CDATA[andrewhouse621@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Designing a Website]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/08/designing-a-website/"/>
+    <updated>2014-08-08T17:13:05-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/08/designing-a-website</id>
+    <content type="html"><![CDATA[<p>An eye for art I do not have. <br>
+I can&rsquo;t paint, draw, sculpt or any of the like.
+When it comes to making things look good, I have to say that I am a numskull.
+However, I think designing a website is incredibly challenging and somehow fun.
+I&rsquo;m not very fluent in css.
+I can read it just fine, but when it comes to creating my own css from my own ideas,
+I find it hard.
+I tend to use tools like Twitter Bootstrap, ones that can give a default layout
+and style without me having to give it much thought.
+After a talk today with Sam Kapila, I felt a little at ease when thinking about
+web design.
+<br><br>
+It&rsquo;s all about the User Experience. <br>
+Making the person who is going to read my page to feel comfortable.
+Not having to search for what they need, making it very clear, and using tools/tricks
+to have a much easier reading experience.
+For example, something as simple as not having the lines of text too close together.
+I typically don&rsquo;t think about things like that.
+I have a very backend oriented brain.
+I just needed to use my perspective to design. <br>
+Then I had a lightbulb moment.<br>
+Pay attention to certain details on websites that annoy me and don&rsquo;t do that(also the opposite).
+It&rsquo;s simple.
+Do I hate that color? DON&rsquo;T DO IT. Do I like the way that navigation is laid out?
+Inspect that element and see what they did.
+I believe I&rsquo;m making designing harder than it is.
+I just have to KISS (Keep It Simple Stupid) it a little.</p>
+]]></content>
+  </entry>
+  
+</feed>
