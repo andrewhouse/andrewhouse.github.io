@@ -1,0 +1,105 @@
+---
+layout: post
+title: "Figaro"
+date: 2014-08-14 10:12:31 -0400
+comments: true
+categories: ['rails', 'gem', 'figaro']
+keywords: gem, figaro, ruby, rails, andrew, house, junior, rails, developer, engineer, dev
+description: "How to use the Figaro Gem with Heroku"
+---
+Once upon a time when I didn't know what I was doing.<br>
+I was trying to setup a rails app for my wife and have her family upload
+images and a birthday message.
+After some research, I decided to use Amazon Web Services to host my images.
+I got it configured in my rails app with Paperclip and that is when I made
+a fatal, fatal, fatal error.<br><br>
+I put in my bucketname and password directly into my code.<br><br>
+The following morning, I received a call from Amazon.
+Confirming whether I had setup 5 instances across the world racking up $250
+overnight.<br>
+I freaked out a little.<br>
+After getting that resolved, I searched for how I can avoid making that
+stupid mistake again.
+My research turned up a gem called **Figaro**.<br>
+[Figaro](https://github.com/laserlemon/figaro) is used to hide confidential information.
+Usernames, passwords, you name it and it will store the variables in a file
+that will be automatically ignored from git and can easily be configured
+for [Heroku](http://heroku.com). <br>
+<h3>Getting Started</h3>
+As always, you want to start by adding Figaro to your Gemfile.
+{% codeblock Gemfile lang:ruby https://github.com/laserlemon/figaro %}
+gem 'figaro'
+{% endcodeblock %}
+<!-- more -->
+*Note: Always run bundle after changing your gemfile*<br><br>
+Next we will bundle our gems for use.
+{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+bundle
+{% endcodeblock %}
+*Note: bundle is shorthand for bundle install.*<br>
+<h3>Generating and Using Figaro Logic</h3>
+The Figaro gem comes with a generator that will have rails install the
+*'./config/application.yml'* file, and add it to the git ignore list.
+{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+rails g figaro:install
+{% endcodeblock %}
+*Note: g is short for generate.*<br><br>
+Now it's time for the magic.<br>
+Open up *'./config/application.yml'*.
+I'll be assuming that you are trying to setup a mailer and need your Gmail
+username and password.
+{% codeblock config/application.yml lang:ruby https://github.com/laserlemon/figaro %}
+GMAIL_USERNAME: testdummy@gmail.com
+GMAIL_PASSWORD: password123456
+{% endcodeblock %}
+These files are now able to be accessed via
+[Environment Variables](http://www.ruby-doc.org/core-2.1.2/ENV.html).
+Environment variables can be called in any of your rails files.
+Normally, you can access Environment Variables one way.
+{% codeblock Ruby Code lang:ruby https://github.com/laserlemon/figaro %}
+ENV["GMAIL_USERNAME"]
+{% endcodeblock %}
+*Note: All Caps are critical.*<br><br>
+This will render *testdummy@gmail.com* wherever the environment variable is
+envoked.
+A way of calling environment variables through Figaro is to use their syntax.
+{% codeblock Ruby Code lang:ruby https://github.com/laserlemon/figaro %}
+Figaro.env.gmail_username
+{% endcodeblock %}
+Now instead of caps, brackets, and quotations; it is a simple method call.
+<h3>Multiple Environments</h3>
+Figaro allows the use of different variables in different environments.
+For example, in the Gmail example; let's say you want to have a test email
+address for development, but a special email account for production emails.
+For figaro it's a simple setup.
+{% codeblock config/application.yml lang:ruby https://github.com/laserlemon/figaro %}
+development:
+  GMAIL_USERNAME: testdummy@gmail.com
+  GMAIL_PASSWORD: password123456
+production:
+  GMAIL_USERNAME: superawesome@gmail.com
+  GMAIL_PASSWORD: W$aIk91@45*lkM
+{% endcodeblock %}
+*Note: The indentation is critical.*<br><br>
+That is all.<br>
+Figaro and Rails will know which environment you're in and use that particular
+username and password.
+<h3>Setting up for Heroku</h3>
+Let's say that you are wanting to deploy your app through Heroku, but don't know
+how the environment variables can be setup on the remote server.<br>
+No fear!<br>
+A simple command and figaro will take care of it for you.
+{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+rake figaro:heroku
+{% endcodeblock %}
+BOOM.<br>
+Your environment variables have been setup on Heroku.
+If you wanted to confirm that they're setup all nice and tidy.
+After deploying to heroku, [type in the command](https://devcenter.heroku.com/articles/config-vars).
+{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+heroku config
+{% endcodeblock %}
+<h3>Go Play!</h3>
+Now figaro has been installed on your Rails app, you can deploy easily to heroku,
+and your information has not been compromised.
+I'd call that a pretty good day.

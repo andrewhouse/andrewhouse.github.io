@@ -4,7 +4,7 @@ title: "Twitter Bootstrap Rails"
 date: 2014-08-13 17:38:02 -0400
 comments: true
 categories: ['rails', 'bootstrap']
-keywords: ruby, rails, andrew, house, junior, rails, developer, engineer, dev
+keywords: twitter, bootstrap, gem, ruby, rails, andrew, house, junior, rails, developer, engineer, dev
 description: "How to use the Twitter-Bootstrap-Rails Gem"
 ---
 Being entirely void of creativity, the [Twitter Bootstrap Rails Gem](https://github.com/seyhunak/twitter-bootstrap-rails)
