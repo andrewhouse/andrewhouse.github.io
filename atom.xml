@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-14T08:46:59-04:00</updated>
+  <updated>2014-08-14T09:51:00-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -22,12 +22,133 @@
 is amazing.<br>
 I use Twitter Bootstrap(bootstrap for short) to generate basic layouts so I
 can get a handle on how things can possibly look.
-A little pizzazz goes a long way ya&#8217; know. <br><br></p>
+Not to mention, it gives an amazing starting point for building good looking css.
+If you visit the <a href="http://getbootstrap.com/components/">Twitter Bootstrap Home Page</a>,
+you can see all of the styles you can create.
+If you are a beginniner, ignore anything and everything Javascript related.
+Stick primarily to the CSS and Components page and customize your page with
+their features.
+A little pizzazz goes a long way ya&#8217; know. <br></p>
 
-<p><h3>Getting Started<h3><br><br>
+<h3>Getting Started</h3>
+
+
+<p>I am assuming that you have a new rails project and are looking to add bootstrap
+to that project.<br><br>
+Let&rsquo;s start by adding the &lsquo;twitter-bootstrap-rails&rsquo; gem to the Gemfile.</p>
+
 <figure class='code'><figcaption><span>Gemfile</span><a href='https://github.com/seyhunak/twitter-bootstrap-rails'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;twitter-bootstrap-rails&#39;</span>
-</span></code></pre></td></tr></table></div></figure></p>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<!-- more -->
+
+
+<p><strong>ALWAYS</strong> After you update your Gemfile in any way, run bundler.
+Now open up your terminal/iTerm/command prompt.
+The rest of generating default bootstrap logic will be done from the terminal.</p>
+
+<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/seyhunak/twitter-bootstrap-rails'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Note: bundle is shorthand for bundle install.</em><br><br>
+Next, we need to generate the bootstrap into our Rails app.</p>
+
+<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/seyhunak/twitter-bootstrap-rails'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails generate bootstrap:install static
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Note: g is shorthand for generate when Rails is the context.</em></p>
+
+<h3>Generating the Default Layout Page</h3>
+
+
+<p>Now bootstrap has been installed into your Rails app and you can access bootstrap
+logic if you want to completely customize your page.
+However, bootstrap can help generate default layouts for your application.html page and
+the generated views.<br>
+In order to generate a default layout page, you need to run the following.</p>
+
+<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/seyhunak/twitter-bootstrap-rails'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails g bootstrap:layout application fluid -f
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Note: You can run the code without the -f flag. All the flag will do is force the changes
+so you don&rsquo;t have to repeatedly say yes to every little thing.</em><br><br>
+<em>Note: If you have installed haml or slim and your application file uses those tags,
+then bootstrap will install the layout in that format. Cool right?</em><br><br>
+Now if you look at your application.html.erb(if you&rsquo;re using erb) you will notice
+the drastic change to the html. Don&rsquo;t be afraid of all of the head logic.
+Most of it is for mobile and meta data.
+If you wanted to go ahead and customize your layout page, you can use
+the css or components on the <a href="http://getbootstrap.com/components/">Twitter Bootstrap Page</a>.
+If there are other types of bootstrap that you want to change.
+For example, you hate the color of when you hover over your title on the navbar.
+To make changes directly to the css go to <em>&lsquo;./app/assets/stylesheets/bootstrap_and_overrides.css&rsquo;</em>
+and make your customizations there.<br></p>
+
+<h3>Simple Form</h3>
+
+
+<p>If you are using <a href="https://github.com/plataformatec/simple_form">Simple Form</a>,
+there is a bootstrap generator for simple form. If you are thinking about
+using simple form, do so <strong>before</strong> installing the default views. If not,
+the view forms will be installed in the default form format.</p>
+
+<figure class='code'><figcaption><span>Gemfile</span><a href='https://github.com/plataformatec/simple_form'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;simple_form&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Note: Remember to bundle after changing the Gemfile.</em><br></p>
+
+<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/seyhunak/twitter-bootstrap-rails'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle
+</span><span class='line'>rails g simple_form:install --bootstrap
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Generating Default Views</h3>
+
+
+<p>The synax for changing the layout of a set of views are.</p>
+
+<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/seyhunak/twitter-bootstrap-rails'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails g bootstrap:themed <span class="o">[</span>RESOURCE_NAME<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Resource name is the name of the <em>controller</em> of which you would like the views
+changed. Let&rsquo;s say that you want to make a Posts controller.</p>
+
+<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/seyhunak/twitter-bootstrap-rails'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails g scaffold post title:string content:text
+</span><span class='line'>rake db:migrate
+</span><span class='line'>rails g bootstrap:themed posts -f
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Note: The pluralization is critical.</em><br><br>
+<em>Note: Once again, the -f flag is just for saving precious time, it&rsquo;s not necessary.</em><br><br>
+Now if you look at the views under <em>&lsquo;./app/views/posts&rsquo;</em> the index and show will now be
+in table format. The new and edit views will render the form page.
+The form will have a great starting layout. <br></p>
+
+<h3>Now the fun begins!</h3>
+
+
+<p>This is the true starting point for customizing your page however you want.
+The basics have been done, now you don&rsquo;t have an ugly beginning point.
+Once again, reference the <a href="http://getbootstrap.com/components/">Twitter Bootstrap Page</a>
+and make every little detail your own.</p>
 ]]></content>
   </entry>
   
