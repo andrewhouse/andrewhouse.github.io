@@ -7,7 +7,6 @@ categories: ['sinatra', 'ruby']
 keywords: sinatra, ruby, rails, andrew, house, junior, rails, developer, engineer, dev
 description: "My first time really playig with Sinatra"
 ---
-
 I never really gave Sinatra a chance. <br>
 After reading articles after articles about how much better Rails is than
 Sinatra, I kind of swept it under the rug.
@@ -24,4 +23,4 @@ apart in Sinatra.
 Making my own get/post requests and assigning routes was fun.
 I may be overplaying it, and I know how beneficial rails will be when I take
 on a larger app. But I have to say that now I will turn to sinatra for low
-level simplistic apps. Kudos to James for making us play with Sinatra. 
+level simplistic apps. Kudos to James for making us play with Sinatra.
