@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-14T09:51:00-04:00</updated>
+  <updated>2014-08-14T11:17:19-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,143 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Figaro]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/14/figaro/"/>
+    <updated>2014-08-14T10:12:31-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/14/figaro</id>
+    <content type="html"><![CDATA[<p>Once upon a time when I didn&rsquo;t know what I was doing.<br>
+I was trying to setup a rails app for my wife and have her family upload
+images and a birthday message.
+After some research, I decided to use Amazon Web Services to host my images.
+I got it configured in my rails app with Paperclip and that is when I made
+a fatal, fatal, fatal error.<br><br>
+I put in my bucketname and password directly into my code.<br><br>
+The following morning, I received a call from Amazon.
+Confirming whether I had setup 5 instances across the world racking up $250
+overnight.<br>
+I freaked out a little.<br>
+After getting that resolved, I searched for how I can avoid making that
+stupid mistake again.
+My research turned up a gem called <strong>Figaro</strong>.<br>
+<a href="https://github.com/laserlemon/figaro">Figaro</a> is used to hide confidential information.
+Usernames, passwords, you name it and it will store the variables in a file
+that will be automatically ignored from git and can easily be configured
+for <a href="http://heroku.com">Heroku</a>. <br></p>
+
+<h3>Getting Started</h3>
+
+
+<p>As always, you want to start by adding Figaro to your Gemfile.
+<figure class='code'><figcaption><span>Gemfile <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">figaro</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<!-- more -->
+
+
+<p><em>Note: Always run bundle after changing your gemfile</em><br><br>
+Next we will bundle our gems for use.
+<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>bundle
+</span></code></pre></td></tr></table></div></figure>
+<em>Note: bundle is shorthand for bundle install.</em><br></p>
+
+<h3>Generating and Using Figaro Logic</h3>
+
+
+<p>The Figaro gem comes with a generator that will have rails install the
+<em>&lsquo;./config/application.yml&rsquo;</em> file, and add it to the git ignore list.
+<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rails g figaro:install
+</span></code></pre></td></tr></table></div></figure>
+<em>Note: g is short for generate.</em><br><br>
+Now it&rsquo;s time for the magic.<br>
+Open up <em>&lsquo;./config/application.yml&rsquo;</em>.
+I&rsquo;ll be assuming that you are trying to setup a mailer and need your Gmail
+username and password.
+<figure class='code'><figcaption><span>config/application.yml <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#111;&amp;#58;&amp;#116;&amp;#x65;&amp;#x73;&amp;#x74;&amp;#x64;&amp;#x75;&amp;#109;&amp;#109;&amp;#x79;&amp;#x40;&amp;#103;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#46;&amp;#x63;&amp;#111;&amp;#x6d;&quot;</span><span class="o">&gt;&amp;</span><span class="c1">#116;&amp;#x65;&amp;#115;&amp;#116;&amp;#100;&amp;#x75;&amp;#109;&amp;#x6d;&amp;#x79;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;</span>
+</span><span class='line'><span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">password123456</span>
+</span></code></pre></td></tr></table></div></figure>
+These files are now able to be accessed via
+<a href="http://www.ruby-doc.org/core-2.1.2/ENV.html">Environment Variables</a>.
+Environment variables can be called in any of your rails files.
+Normally, you can access Environment Variables one way.
+<figure class='code'><figcaption><span>Ruby Code <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ENV</span><span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">GMAIL_USERNAME</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+<em>Note: All Caps are critical.</em><br><br>
+This will render <em>testdummy@gmail.com</em> wherever the environment variable is
+envoked.
+A way of calling environment variables through Figaro is to use their syntax.
+<figure class='code'><figcaption><span>Ruby Code <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Figaro</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">gmail_username</span>
+</span></code></pre></td></tr></table></div></figure>
+Now instead of caps, brackets, and quotations; it is a simple method call.</p>
+
+<h3>Multiple Environments</h3>
+
+
+<p>Figaro allows the use of different variables in different environments.
+For example, in the Gmail example; let&rsquo;s say you want to have a test email
+address for development, but a special email account for production emails.
+For figaro it&rsquo;s a simple setup.
+<figure class='code'><figcaption><span>config/application.yml <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">development</span><span class="p">:</span>
+</span><span class='line'>  <span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#116;&amp;#x65;&amp;#x73;&amp;#116;&amp;#x64;&amp;#x75;&amp;#x6d;&amp;#x6d;&amp;#x79;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;</span><span class="o">&gt;&amp;</span><span class="c1">#116;&amp;#101;&amp;#115;&amp;#x74;&amp;#100;&amp;#117;&amp;#109;&amp;#109;&amp;#x79;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;</span>
+</span><span class='line'>  <span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">password123456</span>
+</span><span class='line'><span class="ss">production</span><span class="p">:</span>
+</span><span class='line'>  <span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x73;&amp;#x75;&amp;#112;&amp;#x65;&amp;#114;&amp;#97;&amp;#x77;&amp;#x65;&amp;#x73;&amp;#x6f;&amp;#x6d;&amp;#x65;&amp;#64;&amp;#103;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&quot;</span><span class="o">&gt;&amp;</span><span class="c1">#115;&amp;#x75;&amp;#112;&amp;#101;&amp;#x72;&amp;#97;&amp;#119;&amp;#101;&amp;#x73;&amp;#x6f;&amp;#x6d;&amp;#x65;&amp;#64;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;</span>
+</span><span class='line'>  <span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">W</span><span class="vg">$aIk91</span><span class="err">@</span><span class="mi">45</span><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">lkM</span>
+</span></code></pre></td></tr></table></div></figure>
+</em>Note: The indentation is critical.*<br><br>
+That is all.<br>
+Figaro and Rails will know which environment you&rsquo;re in and use that particular
+username and password.</p>
+
+<h3>Setting up for Heroku</h3>
+
+
+<p>Let&rsquo;s say that you are wanting to deploy your app through Heroku, but don&rsquo;t know
+how the environment variables can be setup on the remote server.<br>
+No fear!<br>
+A simple command and figaro will take care of it for you.
+<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake figaro:heroku
+</span></code></pre></td></tr></table></div></figure>
+BOOM.<br>
+Your environment variables have been setup on Heroku.
+If you wanted to confirm that they&rsquo;re setup all nice and tidy.
+After deploying to heroku, <a href="https://devcenter.heroku.com/articles/config-vars">type in the command</a>.
+<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>heroku config
+</span></code></pre></td></tr></table></div></figure></p>
+
+<h3>Go Play!</h3>
+
+
+<p>Now figaro has been installed on your Rails app, you can deploy easily to heroku,
+and your information has not been compromised.
+I&rsquo;d call that a pretty good day.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Twitter Bootstrap Rails]]></title>
@@ -221,53 +358,6 @@ To me, designing this way helps maintain my sanity and keep organized.<br></p>
 <p>Objects are my friends, and designing in such a way isn&rsquo;t too hard of a task.
 Just be mindful of the roles each object plays, name them accordingly, and
 create the puzzle that holds all the pieces perfectly.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How Ruby Chose Me]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/08/06/how-ruby-chose-me/"/>
-    <updated>2014-08-06T08:49:11-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/08/06/how-ruby-chose-me</id>
-    <content type="html"><![CDATA[<p>Javascript was my first programming language.
-While it was fun to use, it was also very syntax heavy.
-The amount of ()&rsquo;s and {}&rsquo;s pretty much drove me insane.  <br>
-After learning the basics of Javascript I started to look for other
-languages that would be relevant to my goal of web development.
-I had come to learn how Javascript was incredibly important making web
-pages function, and I wanted to learn the skills to drive the essential
-pieces that run in the background. That&rsquo;s right, I wanted to take a look
-into the back-end. <br></p>
-
-<!-- more -->
-
-
-<p>After researching for countless days I finally stumbled upon Ruby on Rails.
-It seemed that Rails was a great way to start looking into the backend.
-However, the majority of places I saw said to absolutly not start Rails
-until I was fluent in Ruby.
-Then a lightbulb moment came.
-I remember seeing a Ruby course when I was going over the Javascript codeacademy
-course.
-There I went, headfirst into Ruby without a clue of what it was.<br><br>
-I thought Ruby was joking with me.
-Hardly any ()&rsquo;s and only {}&rsquo;s with hashes and blocks. Are you serious?
-It was fluid, less verbose, and object oriented.
-I fell head over heels.
-From that point on I focused mainly on Ruby and learning how to properly structure
-methods, classes, and everything I could.
-I&rsquo;ve got to the point to where just getting something to work the way I want to isn&rsquo;t
-enought, I need to have it be in best practice.
-Using proper standards and conventions adopted by professionals.
-Ruby is a ton of fun.
-I&rsquo;m incredibly passionate about it and it has made me a more passionate developer.<br><br>
-Ruby pulled me into it&rsquo;s world and I couldn&rsquo;t be happier.
-From there I went to learn basic Rails and make a few web apps of my own.
-Currently, I am attending the IronYard in Atlanta, GA to learn more
-advanced Ruby and Rails.
-By the end of this I feel I will be absolutely be prepared to be a critical
-asset to any team. <br><br>
-I have Ruby to thank for all of it.</p>
 ]]></content>
   </entry>
   

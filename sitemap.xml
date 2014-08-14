@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://andrewhouse.github.io/blog/2014/08/14/figaro/</loc>
+    <lastmod>2014-08-14T10:12:31-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://andrewhouse.github.io/blog/2014/08/13/twitter-bootstrap-rails/</loc>
     <lastmod>2014-08-13T17:38:02-04:00</lastmod>
     <priority>0.8</priority>
@@ -71,21 +77,21 @@
   
   <url>
     <loc>http://andrewhouse.github.io/blog/archives/</loc>
-    <lastmod>2014-08-14T09:51:00-04:00</lastmod>
+    <lastmod>2014-08-14T11:17:19-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/</loc>
-    <lastmod>2014-08-14T09:51:00-04:00</lastmod>
+    <lastmod>2014-08-14T11:17:19-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/about/</loc>
-    <lastmod>2014-08-14T09:51:00-04:00</lastmod>
+    <lastmod>2014-08-14T11:17:19-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
