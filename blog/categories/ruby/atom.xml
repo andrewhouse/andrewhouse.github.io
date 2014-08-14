@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-11T22:12:50-04:00</updated>
+  <updated>2014-08-14T08:46:59-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Gem Choices]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/13/gem-choices/"/>
+    <updated>2014-08-13T16:37:02-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/13/gem-choices</id>
+    <content type="html"><![CDATA[<p>Gem&rsquo;s make my Rails world go round. <br>
+However, there are so many gems around that it would take entirely too long
+to comb through them all.
+I do have a method that helps me select certain gems from others. <br>
+<strong>Documentation.</strong><br>
+If a gem is lacking in how-to&rsquo;s, tutorials, or efficient documentation-I
+typically skip over it.
+For example, one of my favorite gems is <a href="https://github.com/plataformatec/simple_form">Simple Form</a>.
+Simple Form allows forms to be a little easier to read.
+My favorite part about it?<br>
+Look at all of that documenation on the Github page.<br>
+I love it.
+There have been situations where I use gems that don&rsquo;t have great documentation.
+Typically that is when I&rsquo;m desperate for something and have exhausted my resources.
+Odds are, the gem is a failure and I crawl into a little hole for a few minutes.
+Alas, gems are great to use and their documentation/codebase allows for steady
+knowledge and easy implementation.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sinatra Is Fun]]></title>
