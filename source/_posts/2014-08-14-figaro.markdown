@@ -33,14 +33,14 @@ gem 'figaro'
 <!-- more -->
 *Note: Always run bundle after changing your gemfile*<br><br>
 Next we will bundle our gems for use.
-{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+{% codeblock Terminal lang:console https://github.com/laserlemon/figaro %}
 bundle
 {% endcodeblock %}
 *Note: bundle is shorthand for bundle install.*<br>
 <h3>Generating and Using Figaro Logic</h3>
 The Figaro gem comes with a generator that will have rails install the
 *'./config/application.yml'* file, and add it to the git ignore list.
-{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+{% codeblock Terminal lang:console https://github.com/laserlemon/figaro %}
 rails g figaro:install
 {% endcodeblock %}
 *Note: g is short for generate.*<br><br>
@@ -89,14 +89,14 @@ Let's say that you are wanting to deploy your app through Heroku, but don't know
 how the environment variables can be setup on the remote server.<br>
 No fear!<br>
 A simple command and figaro will take care of it for you.
-{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+{% codeblock Terminal lang:console https://github.com/laserlemon/figaro %}
 rake figaro:heroku
 {% endcodeblock %}
 BOOM.<br>
 Your environment variables have been setup on Heroku.
 If you wanted to confirm that they're setup all nice and tidy.
 After deploying to heroku, [type in the command](https://devcenter.heroku.com/articles/config-vars).
-{% codeblock Terminal lang:bash https://github.com/laserlemon/figaro %}
+{% codeblock Terminal lang:console https://github.com/laserlemon/figaro %}
 heroku config
 {% endcodeblock %}
 <h3>Go Play!</h3>
