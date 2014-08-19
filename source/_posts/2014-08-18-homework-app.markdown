@@ -5,7 +5,7 @@ date: 2014-08-18 15:40:16 -0400
 comments: true
 categories: ['rails', 'ruby', 'heroku']
 keywords: gem, figaro, ruby, rails, andrew, house, junior, rails, developer, engineer, dev
-description: 'Building a Homework App'
+description: "Building a Homework App"
 ---
 I built an app which some of my fellow students can use as a medium to give
 progress on their homework assignments.<br>
@@ -25,4 +25,4 @@ But yea, making apps are fun. I had a lot of challenges in this app.
 Something different I did in this that I had never done before was implementing
 a has_many_through relationship.
 It required me to do quite a bit of reading to see how each piece interacted,
-but in the end it was totally worth it. 
+but in the end it was totally worth it.
