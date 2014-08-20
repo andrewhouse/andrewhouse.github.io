@@ -22,6 +22,6 @@ freshen up on the basics.
 After that I'm going to go through the [Tutorial](https://docs.angularjs.org/tutorial/)
 on the Angular JS Documentation.
 Once I get a good feeling of the flow of Angular, I'm probably going to try and
-implement it into my [The Iron Yard Homework App](tiy-homework.herokuapp.com).
+implement it into my [The Iron Yard Homework App](http://tiy-homework.herokuapp.com).
 I know it will be a long road to get a feeling of the flow of Angular JS, but I
 feel like in the end, it will be a valuable skill to have.

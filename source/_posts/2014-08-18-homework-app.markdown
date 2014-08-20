@@ -9,7 +9,7 @@ description: "Building a Homework App"
 ---
 I built an app which some of my fellow students can use as a medium to give
 progress on their homework assignments.<br>
-[My App](tiy-homework.herokuapp.com) uses Devise for registering users,
+[My App](http://tiy-homework.herokuapp.com) uses Devise for registering users,
 Heroku as the means for depoloyment, and a vast array of fun gems.
 The whole point of the app is that there is a central place where our teacher
 (James Dabbs) can check our homework progress.
