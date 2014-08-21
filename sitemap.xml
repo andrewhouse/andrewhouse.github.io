@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://andrewhouse.github.io/blog/2014/08/21/learning-by-doing/</loc>
+    <lastmod>2014-08-21T09:02:02-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://andrewhouse.github.io/blog/2014/08/19/starting-angular-js/</loc>
     <lastmod>2014-08-19T08:41:45-04:00</lastmod>
     <priority>0.8</priority>
@@ -89,28 +95,28 @@
   
   <url>
     <loc>http://andrewhouse.github.io/blog/archives/</loc>
-    <lastmod>2014-08-19T08:49:36-04:00</lastmod>
+    <lastmod>2014-08-21T09:23:47-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/</loc>
-    <lastmod>2014-08-19T08:49:36-04:00</lastmod>
+    <lastmod>2014-08-21T09:23:47-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/about/</loc>
-    <lastmod>2014-08-19T08:49:36-04:00</lastmod>
+    <lastmod>2014-08-21T09:23:47-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/projects.html</loc>
-    <lastmod>2014-08-19T08:49:36-04:00</lastmod>
+    <lastmod>2014-08-21T09:23:47-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

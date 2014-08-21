@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-19T08:49:36-04:00</updated>
+  <updated>2014-08-21T09:23:47-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -20,7 +20,7 @@
     <id>http://andrewhouse.github.io/blog/2014/08/18/homework-app</id>
     <content type="html"><![CDATA[<p>I built an app which some of my fellow students can use as a medium to give
 progress on their homework assignments.<br>
-<a href="tiy-homework.herokuapp.com">My App</a> uses Devise for registering users,
+<a href="http://tiy-homework.herokuapp.com">My App</a> uses Devise for registering users,
 Heroku as the means for depoloyment, and a vast array of fun gems.
 The whole point of the app is that there is a central place where our teacher
 (James Dabbs) can check our homework progress.

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-19T08:49:36-04:00</updated>
+  <updated>2014-08-21T09:23:47-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -33,7 +33,7 @@ freshen up on the basics.
 After that I&rsquo;m going to go through the <a href="https://docs.angularjs.org/tutorial/">Tutorial</a>
 on the Angular JS Documentation.
 Once I get a good feeling of the flow of Angular, I&rsquo;m probably going to try and
-implement it into my <a href="tiy-homework.herokuapp.com">The Iron Yard Homework App</a>.
+implement it into my <a href="http://tiy-homework.herokuapp.com">The Iron Yard Homework App</a>.
 I know it will be a long road to get a feeling of the flow of Angular JS, but I
 feel like in the end, it will be a valuable skill to have.</p>
 ]]></content>
