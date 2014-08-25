@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-08-21T09:23:47-04:00</updated>
+  <updated>2014-08-25T10:40:52-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Forge Hackathon]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/25/forge-hackathon/"/>
+    <updated>2014-08-25T10:27:33-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/25/forge-hackathon</id>
+    <content type="html"><![CDATA[<p>I was a mentor at my first hackathon.<br>
+Weird right?
+The Iron Yard was a sponsor at the <a href="http://forgeatl.com/">Forge Hackathon</a> in Atlanta,
+and they asked their students if some of them would like to be mentors.
+I thought it would be a great experience to see what a hackathon&rsquo;s atmosphere
+is like, and talk to people and see what they&rsquo;re thinking.
+So I roll in Saturday morning and sit in a room just for software development.
+My role as a mentor was to sit and wait for people to ask for help.
+After about 5 minutes of sitting, I was approached by a team looking for help.<br><br>
+Their idea was that they were developing a wearable band that doctors were
+able to update their personal data.
+Such as basic information (name, birthday, etc) and more elaborate data such
+as diseases, medication, etc.
+The problem they had was that their target locations only had internet once every
+few months and didn&rsquo;t know how to store their data locally.
+I recommended storing basic data on the wristband (before they were only trying
+to store the data on a server with a wristband having only an id).
+This way, when the doctor has internet they can push their data up to the server,
+allowing the internet copy to be up to date.
+The copy on the wristband would be as current as the doctor&rsquo;s version is.
+So if they were to move and go to a different doctor, that doctor would
+have the most up to date version that their previous doctor had.<br>
+Then afterwards I explained strategies to span out their data model into
+separate categories to help future expansion and allow for easier transitions
+of adding data.
+For example, <br>
+instead of having a single User table, break medication, doctors, &amp; diseases
+into a separate table so that adding and removing data would be much more
+efficient. <br><br>
+All in all, they seemed to really enjoy my feedback (actually, I asked if
+I was helpful and they said I was a huge help).
+My first hackathon experience was pretty awesome, it helped my resolve in
+believing in myself and trusting the knowledge I have to help others.
+It&rsquo;s a pretty awesome feeling.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Front End Demo Day]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/08/22/front-end-demo-day/"/>
+    <updated>2014-08-22T21:06:36-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/08/22/front-end-demo-day</id>
+    <content type="html"><![CDATA[<p>Today the Front End course for The Iron Yard students in Atlanta showed their
+final projects.<br>
+I thought it was a very interesting experience.
+There were probably around 50-60 people attending, some Iron Yard affiliated, and
+some potential employers.
+And everyone was there to see the final projects for a few individuals.
+It kind of got my blood pumping.
+In just two short months I will be up on the stage showing off whatever
+project it is that I do.
+Our class (Ruby on Rails) will be giving their presentations at the same time
+as the IOS class.
+Which means my project needs to be twice as amazing as everyone elses.
+The pressure is on, the timer has started.
+There will be a ton of code cranked out in a few months.
+Now I just have to figure out what in the hell I&rsquo;m going to do.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning by Doing]]></title>
