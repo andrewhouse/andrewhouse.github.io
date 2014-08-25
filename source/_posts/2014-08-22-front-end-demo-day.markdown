@@ -5,7 +5,7 @@ date: 2014-08-22 21:06:36 -0400
 comments: true
 categories: ['Iron Yard', 'Front End']
 keywords: front end, Iron Yard, ruby, rails, andrew, house, junior, rails, developer, engineer, dev
-description: "My Take on the Front End Demo's"
+description: "My Take on the Front End Demos"
 ---
 Today the Front End course for The Iron Yard students in Atlanta showed their
 final projects.<br>
