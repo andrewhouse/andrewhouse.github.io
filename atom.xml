@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-09-05T10:59:09-04:00</updated>
+  <updated>2014-09-08T14:22:35-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Enforcing Knowledge]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/09/08/enforcing-knowledge/"/>
+    <updated>2014-09-08T14:15:58-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/09/08/enforcing-knowledge</id>
+    <content type="html"><![CDATA[<p>We go through material so fast at The Iron Yard.<br>
+It isn&rsquo;t like we go through things too fast, but just fast enough
+to understand everything.
+I personally have a tendency to forget basic syntax when blazing through
+new material.<br>
+Do I put a semi-colon here or wrap it in quotation marks?<br>
+Do I need curly brackets here?<br>
+Little details like that come up often in my brain.
+I find it helpful to try to not remember the exact syntax, but where
+I wrote code similar to that to reference.
+That way I&rsquo;m not trying to rush and memorize specific syntax, but
+over time as I continuously refer to my own work it will become
+more normal.<br><br>
+Personally, I enjoy looking at code that I have wrote before.
+Especially code that I don&rsquo;t remember.
+I can see my progress and have the &ldquo;what was I thinking when I wrote this?&rdquo;
+moments.
+To be able to mock my previous self is crucial in self evolution.
+See what I did, and make it better.
+Then I&rsquo;m not just referencing some article online, but take something
+that I put time into and make a new reference by upgrading it.
+There is always something to do.
+Code can always be smaller, faster, and more efficient.
+It&rsquo;s my job to find a perfect balance between those and the time it takes
+to write the code.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Searching With Angular]]></title>
@@ -884,30 +917,6 @@ To me, designing this way helps maintain my sanity and keep organized.<br></p>
 <p>Objects are my friends, and designing in such a way isn&rsquo;t too hard of a task.
 Just be mindful of the roles each object plays, name them accordingly, and
 create the puzzle that holds all the pieces perfectly.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Motivation]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/08/06/motivation/"/>
-    <updated>2014-08-06T14:32:11-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/08/06/motivation</id>
-    <content type="html"><![CDATA[<p>Sometimes it is difficult to find the necessary drive to complete tasks.
-That doesn&rsquo;t happen to me when I code.
-When I get started with an idea or a project, I&rsquo;m fully immersed.
-I like to think of it as a coding high.
-When I&rsquo;m in the zone, writing remarkably precise and efficient code.
-It&rsquo;s a wonderful and beautiful thing.<!-- more --><br></p>
-
-<p>Coding gives me energy.
-I find that by coding, I am able to find things that would seem otherwise mundane, fun.
-The thrill of going beyond my limits and learning a new skill.
-It just puts me in a good mood.<br></p>
-
-<p>I find coding to be extraordinarily soothing.
-There is nothing quite like being lost in a piece of code.
-When the world falls silent and all that remains are my code and me.
-It&rsquo;s a zen like moment, and I have come to appreciate it more and more.</p>
 ]]></content>
   </entry>
   
