@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Rails | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/rails/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-09-08T14:22:35-04:00</updated>
+  <updated>2014-09-11T09:00:02-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Security With Rails]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/09/11/security-with-rails/"/>
+    <updated>2014-09-11T07:53:39-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/09/11/security-with-rails</id>
+    <content type="html"><![CDATA[<p>There is so much I don&rsquo;t know about security.<br>
+Yet it is so fascinating.
+Yesterday I attended a workshop hosted by <a href="https://nvisium.com/">Nvisium</a>, with the premise
+of discussing vulnerabilities in Rails and how to avoid them.
+It amazes me how much security professionals know.
+In order to understand security, you need to know everything about
+the framework you&rsquo;re using, as well as exactly how the web works.<br><br>
+The workshop was led by <a href="https://twitter.com/cktricky">Ken Johnson</a>, the
+CTO of Nvisium.
+I won&rsquo;t go into the details of exactly what we did and what we covered.
+Instead I&rsquo;ll focus on mainly what I gained from the workshop.
+For me, Security has three faces.<br><br>
+The first face is owned by the designers and those who develop the front
+end.
+For them, the only care for security is that it is there, but doesn&rsquo;t
+change how they want to order and design the page. <br><br>
+The second face is owned by the developers who want to get code to work.
+I am guilty of this.
+I generally attack code trying to get a feature to work, not really thinking
+about how the parameter I have listed could be sql injected or could
+give away a person&rsquo;s id to allow to try to narrow down who is admin
+and try to attack that specific person.<br><br>
+The last side lies on the ones who want to protect security.
+For them, trying to convince the first two to use best security practices
+must be an absolute headache.
+To take a feature that looks the way the design team wants, and functions
+the way the developers want, and tell them that they are vulnerable
+to attacks.
+It seems to me that they would always be the &ldquo;bad&rdquo; guy in that situation.
+People care about security, as long as it doesn&rsquo;t effect their daily lives.<br><br>
+I took a lot of notes and got a ton of resources from the workshop.
+My plan is to try to do the best I can do make sure that I plug the big
+holes of security in my apps.
+I know that at my current state of being a junior developer that it would
+be impossible to try and do everything, but I will take all the
+necessary steps to prevent my app from being completely vulnerable.<br></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Redesigning an App]]></title>
@@ -152,143 +196,6 @@ Something different I did in this that I had never done before was implementing
 a has_many_through relationship.
 It required me to do quite a bit of reading to see how each piece interacted,
 but in the end it was totally worth it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Figaro]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/08/14/figaro/"/>
-    <updated>2014-08-14T10:12:31-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/08/14/figaro</id>
-    <content type="html"><![CDATA[<p>Once upon a time when I didn&rsquo;t know what I was doing.<br>
-I was trying to setup a rails app for my wife and have her family upload
-images and a birthday message.
-After some research, I decided to use Amazon Web Services to host my images.
-I got it configured in my rails app with Paperclip and that is when I made
-a fatal, fatal, fatal error.<br><br>
-I put in my bucketname and password directly into my code.<br><br>
-The following morning, I received a call from Amazon.
-Confirming whether I had setup 5 instances across the world racking up $250
-overnight.<br>
-I freaked out a little.<br>
-After getting that resolved, I searched for how I can avoid making that
-stupid mistake again.
-My research turned up a gem called <strong>Figaro</strong>.<br>
-<a href="https://github.com/laserlemon/figaro">Figaro</a> is used to hide confidential information.
-Usernames, passwords, you name it and it will store the variables in a file
-that will be automatically ignored from git and can easily be configured
-for <a href="http://heroku.com">Heroku</a>. <br></p>
-
-<h3>Getting Started</h3>
-
-
-<p>As always, you want to start by adding Figaro to your Gemfile.
-<figure class='code'><figcaption><span>Gemfile <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">figaro</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure></p>
-
-<!-- more -->
-
-
-<p><em>Note: Always run bundle after changing your gemfile</em><br><br>
-Next we will bundle our gems for use.
-<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">bundle</span>
-</span></code></pre></td></tr></table></div></figure>
-<em>Note: bundle is shorthand for bundle install.</em><br></p>
-
-<h3>Generating and Using Figaro Logic</h3>
-
-
-<p>The Figaro gem comes with a generator that will have rails install the
-<em>&lsquo;./config/application.yml&rsquo;</em> file, and add it to the git ignore list.
-<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">rails g figaro:install</span>
-</span></code></pre></td></tr></table></div></figure>
-<em>Note: g is short for generate.</em><br><br>
-Now it&rsquo;s time for the magic.<br>
-Open up <em>&lsquo;./config/application.yml&rsquo;</em>.
-I&rsquo;ll be assuming that you are trying to setup a mailer and need your Gmail
-username and password.
-<figure class='code'><figcaption><span>config/application.yml <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x74;&amp;#101;&amp;#115;&amp;#x74;&amp;#x64;&amp;#117;&amp;#x6d;&amp;#x6d;&amp;#x79;&amp;#64;&amp;#103;&amp;#x6d;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&quot;</span><span class="o">&gt;&amp;</span><span class="c1">#116;&amp;#101;&amp;#x73;&amp;#x74;&amp;#x64;&amp;#x75;&amp;#109;&amp;#x6d;&amp;#x79;&amp;#x40;&amp;#103;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;</span>
-</span><span class='line'><span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">password123456</span>
-</span></code></pre></td></tr></table></div></figure>
-These files are now able to be accessed via
-<a href="http://www.ruby-doc.org/core-2.1.2/ENV.html">Environment Variables</a>.
-Environment variables can be called in any of your rails files.
-Normally, you can access Environment Variables one way.
-<figure class='code'><figcaption><span>Ruby Code <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ENV</span><span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">GMAIL_USERNAME</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-<em>Note: All Caps are critical.</em><br><br>
-This will render <em>testdummy@gmail.com</em> wherever the environment variable is
-envoked.
-A way of calling environment variables through Figaro is to use their syntax.
-<figure class='code'><figcaption><span>Ruby Code <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Figaro</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">gmail_username</span>
-</span></code></pre></td></tr></table></div></figure>
-Now instead of caps, brackets, and quotations; it is a simple method call.</p>
-
-<h3>Multiple Environments</h3>
-
-
-<p>Figaro allows the use of different variables in different environments.
-For example, in the Gmail example; let&rsquo;s say you want to have a test email
-address for development, but a special email account for production emails.
-For figaro it&rsquo;s a simple setup.
-<figure class='code'><figcaption><span>config/application.yml <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">development</span><span class="p">:</span>
-</span><span class='line'>  <span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#97;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#116;&amp;#101;&amp;#115;&amp;#116;&amp;#100;&amp;#117;&amp;#109;&amp;#x6d;&amp;#x79;&amp;#x40;&amp;#103;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#x6c;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;&quot;</span><span class="o">&gt;&amp;</span><span class="c1">#116;&amp;#101;&amp;#x73;&amp;#116;&amp;#x64;&amp;#x75;&amp;#109;&amp;#109;&amp;#x79;&amp;#x40;&amp;#x67;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;</span>
-</span><span class='line'>  <span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">password123456</span>
-</span><span class='line'><span class="ss">production</span><span class="p">:</span>
-</span><span class='line'>  <span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;&amp;#109;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#111;&amp;#58;&amp;#115;&amp;#x75;&amp;#x70;&amp;#101;&amp;#114;&amp;#x61;&amp;#119;&amp;#x65;&amp;#115;&amp;#x6f;&amp;#109;&amp;#101;&amp;#x40;&amp;#x67;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&quot;</span><span class="o">&gt;&amp;</span><span class="c1">#115;&amp;#117;&amp;#x70;&amp;#x65;&amp;#x72;&amp;#x61;&amp;#119;&amp;#x65;&amp;#x73;&amp;#111;&amp;#x6d;&amp;#x65;&amp;#64;&amp;#x67;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;</span>
-</span><span class='line'>  <span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">W</span><span class="vg">$aIk91</span><span class="err">@</span><span class="mi">45</span><span class="o">&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">lkM</span>
-</span></code></pre></td></tr></table></div></figure>
-</em>Note: The indentation is critical.*<br><br>
-That is all.<br>
-Figaro and Rails will know which environment you&rsquo;re in and use that particular
-username and password.</p>
-
-<h3>Setting up for Heroku</h3>
-
-
-<p>Let&rsquo;s say that you are wanting to deploy your app through Heroku, but don&rsquo;t know
-how the environment variables can be setup on the remote server.<br>
-No fear!<br>
-A simple command and figaro will take care of it for you.
-<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">rake figaro:heroku</span>
-</span></code></pre></td></tr></table></div></figure>
-BOOM.<br>
-Your environment variables have been setup on Heroku.
-If you wanted to confirm that they&rsquo;re setup all nice and tidy.
-After deploying to heroku, <a href="https://devcenter.heroku.com/articles/config-vars">type in the command</a>.
-<figure class='code'><figcaption><span>Terminal <a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">heroku config</span>
-</span></code></pre></td></tr></table></div></figure></p>
-
-<h3>Go Play!</h3>
-
-
-<p>Now figaro has been installed on your Rails app, you can deploy easily to heroku,
-and your information has not been compromised.
-I&rsquo;d call that a pretty good day.</p>
 ]]></content>
   </entry>
   

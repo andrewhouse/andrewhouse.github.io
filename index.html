@@ -91,6 +91,77 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/09/11/security-with-rails/">Security With Rails</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-11T07:53:39-04:00" pubdate data-updated="true">Sep 11<sup>th</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>There is so much I don&rsquo;t know about security.<br>
+Yet it is so fascinating.
+Yesterday I attended a workshop hosted by <a href="https://nvisium.com/">Nvisium</a>, with the premise
+of discussing vulnerabilities in Rails and how to avoid them.
+It amazes me how much security professionals know.
+In order to understand security, you need to know everything about
+the framework you&rsquo;re using, as well as exactly how the web works.<br><br>
+The workshop was led by <a href="https://twitter.com/cktricky">Ken Johnson</a>, the
+CTO of Nvisium.
+I won&rsquo;t go into the details of exactly what we did and what we covered.
+Instead I&rsquo;ll focus on mainly what I gained from the workshop.
+For me, Security has three faces.<br><br>
+The first face is owned by the designers and those who develop the front
+end.
+For them, the only care for security is that it is there, but doesn&rsquo;t
+change how they want to order and design the page. <br><br>
+The second face is owned by the developers who want to get code to work.
+I am guilty of this.
+I generally attack code trying to get a feature to work, not really thinking
+about how the parameter I have listed could be sql injected or could
+give away a person&rsquo;s id to allow to try to narrow down who is admin
+and try to attack that specific person.<br><br>
+The last side lies on the ones who want to protect security.
+For them, trying to convince the first two to use best security practices
+must be an absolute headache.
+To take a feature that looks the way the design team wants, and functions
+the way the developers want, and tell them that they are vulnerable
+to attacks.
+It seems to me that they would always be the &ldquo;bad&rdquo; guy in that situation.
+People care about security, as long as it doesn&rsquo;t effect their daily lives.<br><br>
+I took a lot of notes and got a ton of resources from the workshop.
+My plan is to try to do the best I can do make sure that I plug the big
+holes of security in my apps.
+I know that at my current state of being a junior developer that it would
+be impossible to try and do everything, but I will take all the
+necessary steps to prevent my app from being completely vulnerable.<br></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/09/08/enforcing-knowledge/">Enforcing Knowledge</a></h1>
     
     
@@ -671,64 +742,6 @@ Now I just have to figure out what in the hell I&rsquo;m going to do.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/21/learning-by-doing/">Learning by Doing</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-21T09:02:02-04:00" pubdate data-updated="true">Aug 21<sup>st</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I have a problem when it comes to learning new skills/languages.<br>
-I am very theoretical minded person in a sense that I could read and watch
-videos about anything and be content.
-However, I have found that knowledge doesn&rsquo;t stick as well with me if I don&rsquo;t
-implement what I have learned.<br><br>
-Example:<br>
-I&rsquo;m in the process of learning <a href="http://iamandrewhouse.com/blog/2014/08/19/starting-angular-js/">Angular Js</a>
-and a few months ago I did the Code School course.
-When going over the course again, I noticed that I remembered a lot of theory.
-Things like, I&rsquo;m able to make controllers in a separate JS file and integrate
-them into the HTML directly. Little detailed parts of a whole I remembered, but
-when it came to actual implementation I had forgotten the majority of it.
-That allowed me to catch up fairly quickly on what I was doing, I felt
-when I was learning it again a kind of snowball effect.
-Where everything felt strange at first, but the more I did the quicker it
-came back to me.
-However, I don&rsquo;t want to fall that far back again.
-So this time I&rsquo;m going to try a much different strategy.<br><br></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/08/21/learning-by-doing/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -744,6 +757,10 @@ So this time I&rsquo;m going to try a much different strategy.<br><br></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/09/11/security-with-rails/">Security With Rails</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/08/enforcing-knowledge/">Enforcing Knowledge</a>
       </li>
     
@@ -757,10 +774,6 @@ So this time I&rsquo;m going to try a much different strategy.<br><br></p>
     
       <li class="post">
         <a href="/blog/2014/08/31/redesigning-an-app/">Redesigning an App</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/08/29/crazy-easy-gravatars/">Crazy Easy Gravatars</a>
       </li>
     
   </ul>

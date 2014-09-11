@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-09-08T14:22:35-04:00</updated>
+  <updated>2014-09-11T09:00:02-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Security With Rails]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/09/11/security-with-rails/"/>
+    <updated>2014-09-11T07:53:39-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/09/11/security-with-rails</id>
+    <content type="html"><![CDATA[<p>There is so much I don&rsquo;t know about security.<br>
+Yet it is so fascinating.
+Yesterday I attended a workshop hosted by <a href="https://nvisium.com/">Nvisium</a>, with the premise
+of discussing vulnerabilities in Rails and how to avoid them.
+It amazes me how much security professionals know.
+In order to understand security, you need to know everything about
+the framework you&rsquo;re using, as well as exactly how the web works.<br><br>
+The workshop was led by <a href="https://twitter.com/cktricky">Ken Johnson</a>, the
+CTO of Nvisium.
+I won&rsquo;t go into the details of exactly what we did and what we covered.
+Instead I&rsquo;ll focus on mainly what I gained from the workshop.
+For me, Security has three faces.<br><br>
+The first face is owned by the designers and those who develop the front
+end.
+For them, the only care for security is that it is there, but doesn&rsquo;t
+change how they want to order and design the page. <br><br>
+The second face is owned by the developers who want to get code to work.
+I am guilty of this.
+I generally attack code trying to get a feature to work, not really thinking
+about how the parameter I have listed could be sql injected or could
+give away a person&rsquo;s id to allow to try to narrow down who is admin
+and try to attack that specific person.<br><br>
+The last side lies on the ones who want to protect security.
+For them, trying to convince the first two to use best security practices
+must be an absolute headache.
+To take a feature that looks the way the design team wants, and functions
+the way the developers want, and tell them that they are vulnerable
+to attacks.
+It seems to me that they would always be the &ldquo;bad&rdquo; guy in that situation.
+People care about security, as long as it doesn&rsquo;t effect their daily lives.<br><br>
+I took a lot of notes and got a ton of resources from the workshop.
+My plan is to try to do the best I can do make sure that I plug the big
+holes of security in my apps.
+I know that at my current state of being a junior developer that it would
+be impossible to try and do everything, but I will take all the
+necessary steps to prevent my app from being completely vulnerable.<br></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Enforcing Knowledge]]></title>
@@ -884,39 +928,6 @@ I know that I&rsquo;m overly dependent on electricity; my profession pretty much
 If something happened and we went back to the stone age, I would be royally screwed.
 I do enjoy the era I was born into, and I look forward to the future and what
 humanity will come up with to fill the void for everyone.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Being Object Oriented]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/08/07/being-object-oriented/"/>
-    <updated>2014-08-07T10:02:29-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/08/07/being-object-oriented</id>
-    <content type="html"><![CDATA[<p>I love designing classes in an Object Oriented fashion.
-It gives a good feeling, like there aren&rsquo;t just a bunch of empty method.
-Each method belongs to something larger, each piece makes the whole complete.
-Object Oriented Programming (OOP) just makes sense to me.<!-- more --> <br><br>
-I like to think of classes as factories.
-Each factory pumps out a special part thats essential for the whole.
-The combination of all of the parts produced by the factories make a larger
-object.
-Attacking problems this way helps me pre-debug(defensive coding) the situation.
-Doing so makes it easier to debug, read, and understand.
-<br><br>
-Even when not specifically designing Object Oriented features, I still
-think of designing projects like objects.
-Let&rsquo;s say I&rsquo;m building a rails app.
-At the top level there is the MVC(model, view, controller).
-From there I break it down into pieces.
-Each view has several HTML &amp; CSS files.
-Each HTML can have partials, their own css stylings, etc.
-I keep breaking every piece down and down to make every little bit easier to
-understand.
-To me, designing this way helps maintain my sanity and keep organized.<br></p>
-
-<p>Objects are my friends, and designing in such a way isn&rsquo;t too hard of a task.
-Just be mindful of the roles each object plays, name them accordingly, and
-create the puzzle that holds all the pieces perfectly.</p>
 ]]></content>
   </entry>
   
