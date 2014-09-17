@@ -3,7 +3,7 @@ layout: post
 title: "Intro to Omniauth"
 date: 2014-09-17 09:01:26 -0400
 comments: true
-categories: [gems, rails]
+categories: ['gems', 'rails']
 keywords: gems, Iron Yard, ruby, rails, andrew, house, junior, rails, developer, engineer, dev
 description: "Introduction to Omniauth"
 ---
