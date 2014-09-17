@@ -3,7 +3,7 @@ layout: post
 title: "Crazy Easy Gravatars"
 date: 2014-08-29 14:24:22 -0400
 comments: true
-categories:['gem', 'gravtastic', 'ruby', 'rails']
+categories: ['gem', 'gravtastic', 'ruby', 'rails']
 keywords: gem, Iron Yard, ruby, rails, andrew, house, junior, rails, developer, engineer, dev
 description: "The Gem Gravtastic"
 ---
