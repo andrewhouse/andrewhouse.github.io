@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Gems | House of Rails]]></title>
+  <link href="http://andrewhouse.github.io/blog/categories/gems/atom.xml" rel="self"/>
+  <link href="http://andrewhouse.github.io/"/>
+  <updated>2014-09-17T14:52:40-04:00</updated>
+  <id>http://andrewhouse.github.io/</id>
+  <author>
+    <name><![CDATA[Andrew House]]></name>
+    <email><![CDATA[andrewhouse621@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Intro to Omniauth]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/09/17/intro-to-omniauth/"/>
+    <updated>2014-09-17T09:01:26-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/09/17/intro-to-omniauth</id>
+    <content type="html"><![CDATA[<p>It is becoming a trend for websites to enable logging into that website
+via another.<br>
+We&rsquo;ve all seen it.
+The buttons that say &ldquo;Sign in with Facebook&rdquo;, or various other
+providers.
+For some reason unknown to me (really unknown to me because I don&rsquo;t
+use social media), seeing these logins provide some kind of weird
+validity to a website.
+It&rsquo;s like &ldquo;Oh, they are connected with facebook, they must be credible&rdquo;.
+When I know perfectly well that its just a little bit of code hooking into
+the facebook api.
+Regardless, implementing these login features for a user is a
+great strategy from a user experience (UX) standpoint.<br><br>
+Over the next few blog posts I&rsquo;m going to go over step by step
+using provider authentication, and being able to use multiple
+providers for the same user.
+I feel logging into various providers is a valuable skill for every Rails developer, and
+a great tool to be able to use.<br>
+In the upcoming posts, I&rsquo;ll use Amazon and Google as my examples.
+I&rsquo;ll also detail what is needed to add another provider, and some quirks
+about certain ones (Twitter).</p>
+]]></content>
+  </entry>
+  
+</feed>
