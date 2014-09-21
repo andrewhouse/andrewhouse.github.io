@@ -19,7 +19,7 @@ There are two gems that are going to be needed.
 The first is the actual Omniauth Gem and the second can be found
 [on the list of provider gems](https://github.com/intridea/omniauth/wiki/List-of-Strategies)
 that are supported with Omniauth.
-I decided to use the [google-oath-2][https://github.com/zquestz/omniauth-google-oauth2]
+I decided to use the [google-oath-2](https://github.com/zquestz/omniauth-google-oauth2)
 gem.
 {% codeblock Gemfile lang:ruby https://github.com/zquestz/omniauth-google-oauth2 %}
 gem 'omniauth'
