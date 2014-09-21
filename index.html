@@ -91,6 +91,75 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/09/21/omniauth-logging-in-with-google/">Omniauth - Logging in With Google</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-21T08:42:44-04:00" pubdate data-updated="true">Sep 21<sup>st</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In this article I&rsquo;ll detail the process of logging into google via the
+<a href="https://github.com/intridea/omniauth">Omniauth Gem</a>.<br>
+I set up my code almost the same as how my teacher, <a href="https://github.com/jamesdabbs">James Dabbs</a>
+at The Iron yard. Also keep in mind that <a href="https://github.com/plataformatec/devise">devise</a>
+is needed to be setup before omniauth will work.<br></p>
+
+<h3>Getting Set Up</h3>
+
+
+<p>The first thing we will do is add of the gems and gem dependencies
+we&rsquo;re going to need for logging into google.
+There are two gems that are going to be needed.
+The first is the actual Omniauth Gem and the second can be found
+<a href="gem" title="omniauth-google-oauth2">on the list of provider gems</a>
+that are supported with Omniauth.
+I decided to use the [google-oath-2][<a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a>]
+gem.</p>
+
+<figure class='code'><figcaption><span>Gemfile</span><a href='https://github.com/zquestz/omniauth-google-oauth2'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;omniauth&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s2">&quot;omniauth-google-oauth2&quot;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;hashie&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>Note: Always run bundle after changing your gemfile</em><br>
+<em>Note: I&rsquo;ll go into the purpose of Hashie in the identifier section</em><br></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/09/21/omniauth-logging-in-with-google/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/09/17/intro-to-omniauth/">Intro to Omniauth</a></h1>
     
     
@@ -483,7 +552,7 @@ Each feature is in its own a great challenge, and without challenges life is bor
   
 
 
-<time datetime="2014-08-29T00:00:00-04:00" pubdate data-updated="true"></time>
+<time datetime="2014-08-29T14:24:22-04:00" pubdate data-updated="true">Aug 29<sup>th</sup>, 2014</time>
         
       </p>
     
@@ -679,75 +748,6 @@ Always changing and never perfect.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/25/forge-hackathon/">Forge Hackathon</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-25T10:27:33-04:00" pubdate data-updated="true">Aug 25<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I was a mentor at my first hackathon.<br>
-Weird right?
-The Iron Yard was a sponsor at the <a href="http://forgeatl.com/">Forge Hackathon</a> in Atlanta,
-and they asked their students if some of them would like to be mentors.
-I thought it would be a great experience to see what a hackathon&rsquo;s atmosphere
-is like, and talk to people and see what they&rsquo;re thinking.
-So I roll in Saturday morning and sit in a room just for software development.
-My role as a mentor was to sit and wait for people to ask for help.
-After about 5 minutes of sitting, I was approached by a team looking for help.<br><br>
-Their idea was that they were developing a wearable band that doctors were
-able to update their personal data.
-Such as basic information (name, birthday, etc) and more elaborate data such
-as diseases, medication, etc.
-The problem they had was that their target locations only had internet once every
-few months and didn&rsquo;t know how to store their data locally.
-I recommended storing basic data on the wristband (before they were only trying
-to store the data on a server with a wristband having only an id).
-This way, when the doctor has internet they can push their data up to the server,
-allowing the internet copy to be up to date.
-The copy on the wristband would be as current as the doctor&rsquo;s version is.
-So if they were to move and go to a different doctor, that doctor would
-have the most up to date version that their previous doctor had.<br>
-Then afterwards I explained strategies to span out their data model into
-separate categories to help future expansion and allow for easier transitions
-of adding data.
-For example, <br>
-instead of having a single User table, break medication, doctors, &amp; diseases
-into a separate table so that adding and removing data would be much more
-efficient. <br><br>
-All in all, they seemed to really enjoy my feedback (actually, I asked if
-I was helpful and they said I was a huge help).
-My first hackathon experience was pretty awesome, it helped my resolve in
-believing in myself and trusting the knowledge I have to help others.
-It&rsquo;s a spectacular feeling.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -763,6 +763,10 @@ It&rsquo;s a spectacular feeling.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/09/21/omniauth-logging-in-with-google/">Omniauth - Logging in With Google</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/17/intro-to-omniauth/">Intro to Omniauth</a>
       </li>
     
@@ -776,10 +780,6 @@ It&rsquo;s a spectacular feeling.</p>
     
       <li class="post">
         <a href="/blog/2014/09/05/searching-with-angular/">Searching With Angular</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/02/breaking-the-norm/">Breaking the Norm</a>
       </li>
     
   </ul>
