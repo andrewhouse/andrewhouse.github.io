@@ -17,7 +17,7 @@ The first thing we will do is add of the gems and gem dependencies
 we're going to need for logging into google.
 There are two gems that are going to be needed.
 The first is the actual Omniauth Gem and the second can be found
-[on the list of provider gems](gem "omniauth-google-oauth2")
+[on the list of provider gems](https://github.com/intridea/omniauth/wiki/List-of-Strategies)
 that are supported with Omniauth.
 I decided to use the [google-oath-2][https://github.com/zquestz/omniauth-google-oauth2]
 gem.
