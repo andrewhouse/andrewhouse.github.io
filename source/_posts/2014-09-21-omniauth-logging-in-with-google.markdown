@@ -63,8 +63,8 @@ Lastly we'll configure the credentials.
 Since all I'm going to use is for development I'm going to put in
 the url's as http://localhost:3000. If you're going to deploy to an online
 website, add the same url's as I'm going to add, but replace
-localhost:3000 with (for example) 'http://yourwebsitehere.com'.
-Under Javascript Origins enter in http://localhost:3000.
+localhost:3000 with (for example) 'http://yourwebsitehere.com'.<br>
+Under Javascript Origins enter in http://localhost:3000.<br>
 Under Redirect URI's enter http://localhost:3000/users/auth/google_oauth2/callback.<br>
 Keep in mind, the callback gave me a lot of trouble while setting up.
 Various blogs never had the same callback.
