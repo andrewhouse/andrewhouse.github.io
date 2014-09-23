@@ -41,8 +41,10 @@ bundle
 The Figaro gem comes with a generator that will have rails install the
 *'./config/application.yml'* file, and add it to the git ignore list.
 {% codeblock Terminal lang:console https://github.com/laserlemon/figaro %}
-rails g figaro:install
+figaro install
 {% endcodeblock %}
+*UPDATE: with the new version of Figaro, the old 'rails g figaro:install' command
+no longer works. Use the new 'figaro install' to get application.yml and ignored.*<br>
 *Note: g is short for generate.*<br><br>
 Now it's time for the magic.<br>
 Open up *'./config/application.yml'*.
