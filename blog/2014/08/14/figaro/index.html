@@ -159,11 +159,13 @@ Next we will bundle our gems for use.</p>
 <em>&lsquo;./config/application.yml&rsquo;</em> file, and add it to the git ignore list.</p>
 
 <figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">rails g figaro:install</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">figaro install</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><em>Note: g is short for generate.</em><br><br>
+<p><em>UPDATE: with the new version of Figaro, the old &lsquo;rails g figaro:install&rsquo; command
+no longer works. Use the new &lsquo;figaro install&rsquo; to get application.yml and ignored.</em><br>
+<em>Note: g is short for generate.</em><br><br>
 Now it&rsquo;s time for the magic.<br>
 Open up <em>&lsquo;./config/application.yml&rsquo;</em>.
 I&rsquo;ll be assuming that you are trying to setup a mailer and need your Gmail
@@ -318,6 +320,10 @@ I&rsquo;d call that a pretty good day.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/09/25/preparing-for-my-final-project/">Preparing for My Final Project</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/21/omniauth-logging-in-with-google/">Omniauth - Logging in With Google</a>
       </li>
     
@@ -331,10 +337,6 @@ I&rsquo;d call that a pretty good day.</p>
     
       <li class="post">
         <a href="/blog/2014/09/08/enforcing-knowledge/">Enforcing Knowledge</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/05/searching-with-angular/">Searching With Angular</a>
       </li>
     
   </ul>

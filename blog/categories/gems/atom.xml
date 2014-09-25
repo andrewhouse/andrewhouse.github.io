@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Gems | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/gems/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-09-21T11:47:53-04:00</updated>
+  <updated>2014-09-25T09:08:40-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -35,14 +35,11 @@ The first is the actual Omniauth Gem and the second can be found
 that are supported with Omniauth.
 I decided to use the <a href="https://github.com/zquestz/omniauth-google-oauth2">google-oath-2</a>
 gem.
-<figure class='code'><figcaption><span>Gemfile <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">omniauth</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
-</span><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">omniauth</span><span class="o">-</span><span class="n">google</span><span class="o">-</span><span class="n">oauth2</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span>
-</span><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">hashie</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock Gemfile lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+gem &lsquo;omniauth&rsquo;
+gem &ldquo;omniauth-google-oauth2&rdquo;
+gem &lsquo;hashie&rsquo;
+{% endcodeblock %}
 <em>Note: Always run bundle after changing your gemfile</em><br>
 <em>Note: I&rsquo;ll go into the purpose of Hashie in the identifier section</em><br></p>
 
@@ -50,10 +47,9 @@ gem.
 
 
 <p>Next we will bundle our gems for use.
-<figure class='code'><figcaption><span>Terminal <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">bundle</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock Terminal lang:console <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+bundle
+{% endcodeblock %}
 <em>Note: bundle is shorthand for bundle install.</em><br></p>
 
 <h3>Configuring Devise</h3>
@@ -61,10 +57,9 @@ gem.
 
 <p>Next we need to configure devise to let it know that we are using
 omniauth, and let it know where to put our API key and secret token.
-<figure class='code'><figcaption><span>~/config/initializers/devise.rb <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">omniauth</span> <span class="ss">:google_oauth2</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="no">GOOGLE_ID</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">]</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="no">GOOGLE_SECRET</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock ~/config/initializers/devise.rb lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+config.omniauth :google_oauth2, ENV[&lsquo;GOOGLE_ID&rsquo;], ENV[&lsquo;GOOGLE_SECRET&rsquo;]
+{% endcodeblock %}
 Note that in this case we are using environment variables.
 It is not wise or safe to put any type of api keys, secrets, or passwords
 live on the internet.
@@ -91,8 +86,8 @@ Lastly we&rsquo;ll configure the credentials.
 Since all I&rsquo;m going to use is for development I&rsquo;m going to put in
 the url&rsquo;s as <a href="http://localhost:3000.">http://localhost:3000.</a> If you&rsquo;re going to deploy to an online
 website, add the same url&rsquo;s as I&rsquo;m going to add, but replace
-localhost:3000 with (for example) &lsquo;<a href="http://yourwebsitehere.com">http://yourwebsitehere.com</a>&rsquo;.
-Under Javascript Origins enter in <a href="http://localhost:3000.">http://localhost:3000.</a>
+localhost:3000 with (for example) &lsquo;<a href="http://yourwebsitehere.com">http://yourwebsitehere.com</a>&rsquo;.<br>
+Under Javascript Origins enter in <a href="http://localhost:3000.">http://localhost:3000.</a><br>
 Under Redirect URI&rsquo;s enter <a href="http://localhost:3000/users/auth/google_oauth2/callback.">http://localhost:3000/users/auth/google_oauth2/callback.</a><br>
 Keep in mind, the callback gave me a lot of trouble while setting up.
 Various blogs never had the same callback.
@@ -111,26 +106,20 @@ blog post onto how to add in the two.</p>
 
 <p>Now we need to setup the routes so devise knows how to handle the
 omniauth callback requests.
-<figure class='code'><figcaption><span>~/config/routes.rb <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">devise_for</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:controllers</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">omniauth_callbacks</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">omniauth_callbacks</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock ~/config/routes.rb lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+devise_for :users, :controllers => { omniauth_callbacks: &lsquo;omniauth_callbacks&rsquo; }
+{% endcodeblock %}
 <em>Note: My devise model is named Users, yours may be different.</em><br>
 As you can guess sometime soon we&rsquo;re going to make a controller called
 omniauth_callbacks. We&rsquo;ll get to that soon, first we need to
 let the devise model know that our app is &ldquo;omniauthable&rdquo;.
-<figure class='code'><figcaption><span>~/app/models/user.rb <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">devise</span> <span class="ss">:database_authenticatable</span><span class="p">,</span> <span class="ss">:registerable</span><span class="p">,</span>
-</span><span class='line'>         <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span><span class="p">,</span> <span class="ss">:omniauthable</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock ~/app/models/user.rb lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+class User &lt; ActiveRecord::Base
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  &hellip;
+end
+{% endcodeblock %}
 <em>Note: Again, my model is user.rb, yours may be different.
 Also, note the addition of omniauthable.</em><br></p>
 
@@ -144,50 +133,29 @@ Each method is named after the provider.
 In my implementation, I&rsquo;m setting it up where it is easy to add
 multiple providers, the only line that will need to be edited
 after adding an additional provider is the array list of providers.
-<figure class='code'><figcaption><span>~/app/controllers/omniauth_callbacks_controller.rb <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">OmniauthCallbacksController</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">Devise</span><span class="o">::</span><span class="no">OmniauthCallbacksController</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">provides_callback_for</span><span class="p">(</span><span class="n">provider</span><span class="p">)</span>
-</span><span class='line'>    <span class="n">define_method</span> <span class="n">provider</span> <span class="k">do</span>
-</span><span class='line'>      <span class="n">auth</span> <span class="o">=</span> <span class="n">env</span><span class="o">[&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="n">omniauth</span><span class="o">.</span><span class="n">auth</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;</span><span class="o">]</span>
-</span><span class='line'>      <span class="vi">@user</span> <span class="o">=</span> <span class="no">Identifier</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">auth</span><span class="p">,</span> <span class="n">current_user</span><span class="p">)</span><span class="o">.</span><span class="n">resolve</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;  if @user.persisted?</span>
-</span><span class='line'><span class="sr">    sign_in_and_redirect @user, event: :authentication</span>
-</span><span class='line'><span class="sr">    set_flash_message(:notice, :success, kind: &quot;</span><span class="si">#{</span><span class="n">provider</span><span class="si">}</span><span class="sr">&quot;.capitalize) if is_navigational_format?</span>
-</span><span class='line'><span class="sr">  else</span>
-</span><span class='line'><span class="sr">    session[&quot;devise.</span><span class="si">#{</span><span class="n">provider</span><span class="si">}</span><span class="sr">_data&quot;] = auth</span>
-</span><span class='line'><span class="sr">    redirect_to new_user_registration_url</span>
-</span><span class='line'><span class="sr">  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="o">[</span><span class="ss">:google_oauth2</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">provider</span><span class="o">|</span> <span class="n">provides_callback_for</span> <span class="n">provider</span> <span class="p">}</span>
-</span><span class='line'>  <span class="c1"># ^ Here is where you add additional providers.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock ~/app/controllers/omniauth_callbacks_controller.rb lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+class OmniauthCallbacksController &lt; Devise::OmniauthCallbacksController
+  def self.provides_callback_for(provider)
+    define_method provider do
+      auth = env[&ldquo;omniauth.auth&rdquo;]
+      @user = Identifier.new(auth, current_user).resolve</p>
+
+<pre><code>  if @user.persisted?
+    sign_in_and_redirect @user, event: :authentication
+    set_flash_message(:notice, :success, kind: "#{provider}".capitalize) if is_navigational_format?
+  else
+    session["devise.#{provider}_data"] = auth
+    redirect_to new_user_registration_url
+  end
+end
+</code></pre>
+
+<p>  end</p>
+
+<p>  [:google_oauth2].each { |provider| provides_callback_for provider }
+  # ^ Here is where you add additional providers.
+end
+{% endcodeblock %}
 One thing may stick out as being odd.
 The Identifier.new hasn&rsquo;t been defined yet.
 Next we&rsquo;ll create a service called just that with the purpose of
@@ -200,88 +168,47 @@ and maintain the user.</p>
 <h3>Creating the Identifier Service</h3>
 
 
-<p><figure class='code'><figcaption><span>~/app/services/identifier.rb <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Identifier</span>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">initialize</span> <span class="n">auth</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="kp">nil</span>
-</span><span class='line'>    <span class="vi">@auth</span> <span class="o">=</span> <span class="no">Hashie</span><span class="o">::</span><span class="no">Mash</span><span class="o">.</span><span class="n">new</span> <span class="n">auth</span>
-</span><span class='line'>    <span class="vi">@user</span> <span class="o">=</span> <span class="n">user</span>
-</span><span class='line'>  <span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  def resolve</span>
-</span><span class='line'><span class="sr">    identity = find_or_create_identity</span>
-</span><span class='line'><span class="sr">    user     = ensure_user identity</span>
-</span><span class='line'><span class="sr">    link identity, user</span>
-</span><span class='line'><span class="sr">    user</span>
-</span><span class='line'><span class="sr">  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="kp">private</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  def find_or_create_identity</span>
-</span><span class='line'><span class="sr">    Identity.where(provider: @auth.provider, uid: @auth.uid).</span>
-</span><span class='line'><span class="sr">      create_with(auth_data: @auth).</span>
-</span><span class='line'><span class="sr">      first_or_create!</span>
-</span><span class='line'><span class="sr">  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">def</span> <span class="nf">ensure_user</span> <span class="n">identity</span>
-</span><span class='line'>    <span class="vi">@user</span> <span class="o">||=</span> <span class="n">identity</span><span class="o">.</span><span class="n">user</span>
-</span><span class='line'>    <span class="k">return</span> <span class="vi">@user</span> <span class="k">if</span> <span class="vi">@user</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;pre&gt;&lt;code&gt;@user = User.where(email: identity.email).</span>
-</span><span class='line'><span class="sr">  create_with(</span>
-</span><span class='line'><span class="sr">    name:      identity.name,</span>
-</span><span class='line'><span class="sr">    password:  Devise.friendly_token[0,20]</span>
-</span><span class='line'><span class="sr">  ).first_or_create!</span>
-</span><span class='line'><span class="sr">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;</span><span class="sr">/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  end&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">def</span> <span class="nf">link</span> <span class="n">identity</span><span class="p">,</span> <span class="n">user</span>
-</span><span class='line'>    <span class="n">identity</span><span class="o">.</span><span class="n">update_attribute</span> <span class="ss">:user</span><span class="p">,</span> <span class="n">user</span> <span class="k">unless</span> <span class="n">identity</span><span class="o">.</span><span class="n">user</span> <span class="o">==</span> <span class="n">user</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>{% codeblock ~/app/services/identifier.rb lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+class Identifier
+  def initialize auth, user=nil
+    @auth = Hashie::Mash.new auth
+    @user = user
+  end</p>
+
+<p>  def resolve
+    identity = find_or_create_identity
+    user     = ensure_user identity
+    link identity, user
+    user
+  end</p>
+
+<p>private</p>
+
+<p>  def find_or_create_identity
+    Identity.where(provider: @auth.provider, uid: @auth.uid).
+      create_with(auth_data: @auth).
+      first_or_create!
+  end</p>
+
+<p>  def ensure_user identity
+    @user ||= identity.user
+    return @user if @user</p>
+
+<pre><code>@user = User.where(email: identity.email).
+  create_with(
+    name:      identity.name,
+    password:  Devise.friendly_token[0,20]
+  ).first_or_create!
+</code></pre>
+
+<p>  end</p>
+
+<p>  def link identity, user
+    identity.update_attribute :user, user unless identity.user == user
+  end
+end</p>
+
+<p>{% endcodeblock %}
 It would take a while to type out what each individual method is doing.
 Hashie::Mash is from the hashie gem.
 Essentially, it allows the use of the dot syntax from returned JSON
@@ -300,71 +227,43 @@ the provider.</p>
 
 
 <p>Next we need to create the Identity Model and relate it to the User.
-<figure class='code'><figcaption><span>Terminal <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">rails g model Identity user_id:integer provider uid auth_data:text</span>
-</span><span class='line'><span class="go">rake db:migrate</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock Terminal lang:console <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+rails g model Identity user_id:integer provider uid auth_data:text
+rake db:migrate
+{% endcodeblock %}
 Now that the model has been created and migrated, lets go ahead and
 set up the relationships.
-<figure class='code'><figcaption><span>~/app/models/user.rb <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span>
-</span><span class='line'>  <span class="n">devise</span> <span class="ss">:database_authenticatable</span><span class="p">,</span> <span class="ss">:registerable</span><span class="p">,</span>
-</span><span class='line'>         <span class="ss">:recoverable</span><span class="p">,</span> <span class="ss">:rememberable</span><span class="p">,</span> <span class="ss">:trackable</span><span class="p">,</span> <span class="ss">:validatable</span><span class="p">,</span> <span class="ss">:omniauthable</span>
-</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:identities</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
-</span><span class='line'><span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock ~/app/models/user.rb lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+class User &lt; ActiveRecord::Base<br/>
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  has_many :identities
+  &hellip;
+end</p>
+
+<p>{% endcodeblock %}
 <em>Note: This is for the User Model.</em><br><br>
 Now the Identity Model will have a bit more complexity.</p>
 
-<p><figure class='code'><figcaption><span>~/app/models/identity.rb <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Identity</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:user</span>
-</span><span class='line'>  <span class="n">validates_presence_of</span> <span class="ss">:uid</span><span class="p">,</span> <span class="ss">:provider</span>
-</span><span class='line'>  <span class="n">validates_uniqueness_of</span> <span class="ss">:uid</span><span class="p">,</span> <span class="ss">:scope</span> <span class="o">=&gt;</span> <span class="ss">:provider</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  serialize :auth_data, JSON&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>  <span class="k">def</span> <span class="nf">auth</span>
-</span><span class='line'>    <span class="no">Hashie</span><span class="o">::</span><span class="no">Mash</span><span class="o">.</span><span class="n">new</span> <span class="n">auth_data</span>
-</span><span class='line'>  <span class="k">end</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="sr">&lt;p&gt;  %w(name email image).each do |attr|</span>
-</span><span class='line'><span class="sr">    define_method attr do</span>
-</span><span class='line'><span class="sr">      auth.info.send(attr) || raise(&amp;ldquo;Could not find </span><span class="si">#{</span><span class="kp">attr</span><span class="si">}</span><span class="sr"> in </span><span class="si">#{</span><span class="n">auth</span><span class="si">}</span><span class="sr">&amp;rdquo;)</span>
-</span><span class='line'><span class="sr">    end</span>
-</span><span class='line'><span class="sr">  end</span>
-</span><span class='line'><span class="sr">end</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>{% codeblock ~/app/models/identity.rb lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+class Identity &lt; ActiveRecord::Base
+  belongs_to :user
+  validates_presence_of :uid, :provider
+  validates_uniqueness_of :uid, :scope => :provider</p>
+
+<p>  serialize :auth_data, JSON</p>
+
+<p>  def auth
+    Hashie::Mash.new auth_data
+  end</p>
+
+<p>  %w(name email image).each do |attr|
+    define_method attr do
+      auth.info.send(attr) || raise(&ldquo;Could not find #{attr} in #{auth}&rdquo;)
+    end
+  end
+end
+{% endcodeblock %}
 There are a few things going on here.
 The relationship connection, validations, serialization to json, and
 creating methods.
@@ -380,21 +279,17 @@ I can see keys such as first name, last name, email, images and more!</p>
 
 <p>If you look in ~/apps/views/devise/shared/links.html.haml (I&rsquo;m using haml).
 There is this line of code at the bottom.
-<figure class='code'><figcaption><span>~/apps/views/devise/shared/links.html.haml <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">-</span> <span class="k">if</span> <span class="n">devise_mapping</span><span class="o">.</span><span class="n">omniauthable?</span>
-</span><span class='line'>  <span class="o">-</span> <span class="n">resource_class</span><span class="o">.</span><span class="n">omniauth_providers</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">provider</span><span class="o">|</span>
-</span><span class='line'>    <span class="o">=</span> <span class="n">link_to</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Sign</span> <span class="k">in</span> <span class="n">with</span> <span class="c1">#{provider.to_s.titleize}&amp;rdquo;, omniauth_authorize_path(resource_name, provider)</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock  ~/apps/views/devise/shared/links.html.haml lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+- if devise_mapping.omniauthable?
+  - resource_class.omniauth_providers.each do |provider|
+    = link_to &ldquo;Sign in with #{provider.to_s.titleize}&rdquo;, omniauth_authorize_path(resource_name, provider)
+{% endcodeblock %}
 If you click on the normal devise sign in route, you&rsquo;ll see that
 sign in with google was automatically generated for you.
 If you want to add your own custom link on a given page, use this link.
-<figure class='code'><figcaption><span>~/apps/views/yourview/index.html.haml <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="o">=</span> <span class="n">link_to</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="p">;</span><span class="no">Sign</span> <span class="k">in</span> <span class="n">with</span> <span class="no">Google</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="p">;,</span> <span class="n">user_omniauth_authorize_path</span><span class="p">(</span><span class="ss">:google_oauth2</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure></p>
+{% codeblock  ~/apps/views/yourview/index.html.haml lang:ruby <a href="https://github.com/zquestz/omniauth-google-oauth2">https://github.com/zquestz/omniauth-google-oauth2</a> %}
+= link_to &ldquo;Sign in with Google&rdquo;, user_omniauth_authorize_path(:google_oauth2)
+{% endcodeblock %}</p>
 
 <h3>Conclusion</h3>
 

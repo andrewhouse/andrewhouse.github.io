@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-09-21T11:47:53-04:00</updated>
+  <updated>2014-09-25T09:08:40-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Preparing for My Final Project]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/09/25/preparing-for-my-final-project/"/>
+    <updated>2014-09-25T08:38:05-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/09/25/preparing-for-my-final-project</id>
+    <content type="html"><![CDATA[<p>It&rsquo;s about to get crazy at The Iron Yard.<br>
+We have a week and a half of lecture and practice until we begin final projects.
+Honestly, I have no idea what I&rsquo;m going to do.
+I know that I would love to build a site combining the strengths of Rails backend with Angular JS&rsquo;s front end.
+I suck at ideas though.
+If I have an idea of what to build, the general idea, then I can run with it and do something fun.
+Getting that initial idea is hard as hell for me.
+I plan on asking various people to get their advise for what kind of project would be memorable and useable.
+From October 3-5 The Iron Yard is doing an internal hackathon (Combination of the Front End, IOS, and Rails classes) and I hope that I get an idea from there that I can run with for my final project.
+I would love to work with other classes and form a Scrum centric idea process and work flow to knock down a project.<br> <br>
+The last couple of weeks have been group projects for us.
+Last week I was the project leader of our group and it was very different experience for me.
+I didn&rsquo;t do pure scrum with the group.
+I didn&rsquo;t get client input, or make a board.
+I kind of winged the inputs in my head to develop a MVP.
+This week the leader of our group was a former project manager,<a href="https://github.com/rjgroller">Robert Groller</a>, and knows how to use scrum.
+Actual scrum implementation is much different than &ldquo;winging it&rdquo;.
+I like the workflow process much better with full scrum.
+The timeboxing, workflow, and everything.
+I want this process in my final project.
+My intention is to have James, my teacher, act as the client and give me feedback on what he thinks a user experience should find important in whatever I do. <br><br>
+Now I just need to figure out what I&rsquo;m going to do.
+I&rsquo;m sure I&rsquo;ll figure it out soon.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Omniauth - Logging in With Google]]></title>
@@ -97,8 +128,8 @@ Lastly we&rsquo;ll configure the credentials.
 Since all I&rsquo;m going to use is for development I&rsquo;m going to put in
 the url&rsquo;s as <a href="http://localhost:3000.">http://localhost:3000.</a> If you&rsquo;re going to deploy to an online
 website, add the same url&rsquo;s as I&rsquo;m going to add, but replace
-localhost:3000 with (for example) &lsquo;<a href="http://yourwebsitehere.com">http://yourwebsitehere.com</a>&rsquo;.
-Under Javascript Origins enter in <a href="http://localhost:3000.">http://localhost:3000.</a>
+localhost:3000 with (for example) &lsquo;<a href="http://yourwebsitehere.com">http://yourwebsitehere.com</a>&rsquo;.<br>
+Under Javascript Origins enter in <a href="http://localhost:3000.">http://localhost:3000.</a><br>
 Under Redirect URI&rsquo;s enter <a href="http://localhost:3000/users/auth/google_oauth2/callback.">http://localhost:3000/users/auth/google_oauth2/callback.</a><br>
 Keep in mind, the callback gave me a lot of trouble while setting up.
 Various blogs never had the same callback.
@@ -1002,11 +1033,13 @@ Next we will bundle our gems for use.</p>
 <em>&lsquo;./config/application.yml&rsquo;</em> file, and add it to the git ignore list.</p>
 
 <figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">rails g figaro:install</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">figaro install</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><em>Note: g is short for generate.</em><br><br>
+<p><em>UPDATE: with the new version of Figaro, the old &lsquo;rails g figaro:install&rsquo; command
+no longer works. Use the new &lsquo;figaro install&rsquo; to get application.yml and ignored.</em><br>
+<em>Note: g is short for generate.</em><br><br>
 Now it&rsquo;s time for the magic.<br>
 Open up <em>&lsquo;./config/application.yml&rsquo;</em>.
 I&rsquo;ll be assuming that you are trying to setup a mailer and need your Gmail
@@ -1287,34 +1320,6 @@ Making my own get/post requests and assigning routes was fun.
 I may be overplaying it, and I know how beneficial rails will be when I take
 on a larger app. But I have to say that now I will turn to sinatra for low
 level simplistic apps. Kudos to James for making us play with Sinatra.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Starting Over]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/08/08/starting-over/"/>
-    <updated>2014-08-08T23:37:13-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/08/08/starting-over</id>
-    <content type="html"><![CDATA[<p>I LOVE to play around with new features. <br>
-Tonight I was playing around with omniauth-github and trying to log in via rails.
-I was able to log in (horray!), but I had forgotten what I was supposed to be
-doing initially.
-It happens to me every now and then; I get feature focused. <br><br>
-I&rsquo;m so focused on getting this one little thing to work I lose track of
-my goal. It&rsquo;s times like this, when I&rsquo;m barely into the project, and I was
-able to get my feature to work.
-I find that it&rsquo;s best to scrap it and start over.
-My reasoning?<br>
-  <li>Start on a path where I am able to remain focused.
-  <li>When it is time to create the feature again; I will do it again from scratch,
-forcing myself to learn.
-  <li>In future projects, I will know to be well prepared and focused from the get go.
-<br><br>
-Long story short. <br>
-I played around with a cool thing, got it to work, messed up, started over, and
-didn&rsquo;t loose any passion.
-Not a bad thing if you ask me.
-I&rsquo;ll learn, grow, and do a better job next time.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-09-21T11:47:53-04:00</updated>
+  <updated>2014-09-25T09:08:40-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -28,16 +28,14 @@ Here&rsquo;s how. <br></p>
 <p>Keep in mind, gravtastic relies on Devise to work. So all of the instructions are
 to be used after Devise is setup.<br>
 Go ahead and add the gem gravtastic to your Gemfile.
-<figure class='code'><figcaption><span>Gemfile <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="o">&amp;</span><span class="n">lsquo</span><span class="p">;</span><span class="n">gravtastic</span><span class="o">&amp;</span><span class="n">rsquo</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock Gemfile lang:ruby <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> %}
+gem &lsquo;gravtastic&rsquo;
+{% endcodeblock %}
 <br>
 As always, make sure to bundle after installing a gem.
-<figure class='code'><figcaption><span>Terminal <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">bundle</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock Terminal lang:console <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> %}
+bundle
+{% endcodeblock %}
 <br></p>
 
 <h3>Implementation</h3>
@@ -46,28 +44,22 @@ As always, make sure to bundle after installing a gem.
 <p>Now we need to make sure our model uses gravtastic. Your file may be different
 depending on what you named your devise model.
 I&rsquo;m going to name mine User and generate the code on that premise.
-<figure class='code'><figcaption><span>app/models/user.rb <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="kp">include</span> <span class="no">Gravtastic</span>
-</span><span class='line'>  <span class="n">gravtastic</span>
-</span><span class='line'>  <span class="o">&amp;</span><span class="n">hellip</span><span class="p">;</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
+{% codeblock app/models/user.rb lang:ruby <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> %}
+class User &lt; ActiveRecord::Base
+  include Gravtastic
+  gravtastic
+  &hellip;
+end
+{% endcodeblock %}
 <br>
 With that gravtastic has been able to hook into your devise model. Hooray!
 The last job is rendering the gravatar to the view.<br>
 I&rsquo;m using Haml, so the html syntax may be weird. If you&rsquo;re using Erb, just
 replace the = with &lt;%= and end the line with %></p>
 
-<p><figure class='code'><figcaption><span>app/views/whicheverview.html.haml <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span><span class="n">image_tag</span> <span class="n">current_user</span><span class="o">.</span><span class="n">gravatar_url</span>
-</span></code></pre></td></tr></table></div></figure>
+<p>{% codeblock app/views/whicheverview.html.haml lang:haml <a href="https://github.com/chrislloyd/gravtastic">https://github.com/chrislloyd/gravtastic</a> %}
+=image_tag current_user.gravatar_url
+{% endcodeblock %}
 <br>
 That&rsquo;s it!<br>
 Now a gravatar should be rendering on your page.

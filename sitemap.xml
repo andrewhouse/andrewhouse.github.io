@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://andrewhouse.github.io/blog/2014/09/25/preparing-for-my-final-project/</loc>
+    <lastmod>2014-09-25T08:38:05-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://andrewhouse.github.io/blog/2014/09/21/omniauth-logging-in-with-google/</loc>
     <lastmod>2014-09-21T08:42:44-04:00</lastmod>
     <priority>0.8</priority>
@@ -167,28 +173,28 @@
   
   <url>
     <loc>http://andrewhouse.github.io/blog/archives/</loc>
-    <lastmod>2014-09-21T11:47:53-04:00</lastmod>
+    <lastmod>2014-09-25T09:08:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/</loc>
-    <lastmod>2014-09-21T11:47:53-04:00</lastmod>
+    <lastmod>2014-09-25T09:08:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/about/</loc>
-    <lastmod>2014-09-21T11:47:53-04:00</lastmod>
+    <lastmod>2014-09-25T09:08:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/projects.html</loc>
-    <lastmod>2014-09-21T11:47:53-04:00</lastmod>
+    <lastmod>2014-09-25T09:08:40-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
