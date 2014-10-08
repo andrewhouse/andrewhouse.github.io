@@ -9,9 +9,9 @@
   <meta name="author" content="Andrew House">
 
 
-<meta name="description" content="I think API&rsquo;s are amazing.
-It&rsquo;s kind of weird how much I&rsquo;m into API&rsquo;s lately.
-Yet, I&rsquo;ve only technically made one (and &hellip;">
+<meta name="description" content="Gravtastic saves a ton of headaches when wanting a gravatar.
+In 4 lines of code (seriously 4) I had a gravatar up and running on my app.
+Here&rsquo;s &hellip;">
 
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +86,104 @@ Yet, I&rsquo;ve only technically made one (and &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/29/crazy-easy-gravatars/">Crazy Easy Gravatars</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-29T14:24:22-04:00" pubdate data-updated="true">Aug 29<sup>th</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/chrislloyd/gravtastic">Gravtastic</a> saves a ton of headaches when wanting a gravatar.<br>
+In 4 lines of code (seriously 4) I had a gravatar up and running on my app.
+Here&rsquo;s how. <br></p>
+
+<h3>Getting Started</h3>
+
+
+<p>Keep in mind, gravtastic relies on Devise to work. So all of the instructions are
+to be used after Devise is setup.<br>
+Go ahead and add the gem gravtastic to your Gemfile.</p>
+
+<figure class='code'><figcaption><span>Gemfile</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;gravtastic&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><br>
+As always, make sure to bundle after installing a gem.</p>
+
+<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">bundle</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><br></p>
+
+<h3>Implementation</h3>
+
+
+<p>Now we need to make sure our model uses gravtastic. Your file may be different
+depending on what you named your devise model.
+I&rsquo;m going to name mine User and generate the code on that premise.</p>
+
+<figure class='code'><figcaption><span>app/models/user.rb</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span><span class='line'>  <span class="kp">include</span> <span class="no">Gravtastic</span>
+</span><span class='line'>  <span class="n">gravtastic</span>
+</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><br>
+With that gravtastic has been able to hook into your devise model. Hooray!
+The last job is rendering the gravatar to the view.<br>
+I&rsquo;m using Haml, so the html syntax may be weird. If you&rsquo;re using Erb, just
+replace the = with &lt;%= and end the line with %></p>
+
+<figure class='code'><figcaption><span>app/views/whicheverview.html.haml</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span><span class="n">image_tag</span> <span class="n">current_user</span><span class="o">.</span><span class="n">gravatar_url</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><br>
+That&rsquo;s it!<br>
+Now a gravatar should be rendering on your page.
+If you want to adjust the size you can pass a size option on gravtastic in the model.
+The specifics of different options to use can be found on
+the <a href="https://github.com/chrislloyd/gravtastic">Gravtastic Github Page</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -621,58 +719,6 @@ Let&rsquo;s start by adding the &lsquo;twitter-bootstrap-rails&rsquo; gem to the
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/13/gem-choices/">Gem Choices</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-13T16:37:02-04:00" pubdate data-updated="true">Aug 13<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Gem&rsquo;s make my Rails world go round. <br>
-However, there are so many gems around that it would take entirely too long
-to comb through them all.
-I do have a method that helps me select certain gems from others. <br>
-<strong>Documentation.</strong><br>
-If a gem is lacking in how-to&rsquo;s, tutorials, or efficient documentation-I
-typically skip over it.
-For example, one of my favorite gems is <a href="https://github.com/plataformatec/simple_form">Simple Form</a>.
-Simple Form allows forms to be a little easier to read.
-My favorite part about it?<br>
-Look at all of that documenation on the Github page.<br>
-I love it.
-There have been situations where I use gems that don&rsquo;t have great documentation.
-Typically that is when I&rsquo;m desperate for something and have exhausted my resources.
-Odds are, the gem is a failure and I crawl into a little hole for a few minutes.
-Alas, gems are great to use and their documentation/codebase allows for steady
-knowledge and easy implementation.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/3">&larr; Older</a>
@@ -690,6 +736,10 @@ knowledge and easy implementation.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/10/07/after-the-iron-yard-hackathon/">After: The Iron Yard Hackathon</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/03/before-the-iron-yard-hackathon/">Before: The Iron Yard Hackathon</a>
       </li>
     
@@ -703,10 +753,6 @@ knowledge and easy implementation.</p>
     
       <li class="post">
         <a href="/blog/2014/09/17/intro-to-omniauth/">Intro to Omniauth</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/11/security-with-rails/">Security With Rails</a>
       </li>
     
   </ul>

@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://andrewhouse.github.io/blog/2014/10/07/after-the-iron-yard-hackathon/</loc>
+    <lastmod>2014-10-07T21:44:41-04:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://andrewhouse.github.io/blog/2014/10/03/before-the-iron-yard-hackathon/</loc>
     <lastmod>2014-10-03T17:37:58-04:00</lastmod>
     <priority>0.8</priority>
@@ -179,28 +185,28 @@
   
   <url>
     <loc>http://andrewhouse.github.io/blog/archives/</loc>
-    <lastmod>2014-10-03T17:46:50-04:00</lastmod>
+    <lastmod>2014-10-07T21:58:19-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/</loc>
-    <lastmod>2014-10-03T17:46:50-04:00</lastmod>
+    <lastmod>2014-10-07T21:58:19-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/about/</loc>
-    <lastmod>2014-10-03T17:46:50-04:00</lastmod>
+    <lastmod>2014-10-07T21:58:19-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://andrewhouse.github.io/projects.html</loc>
-    <lastmod>2014-10-03T17:46:50-04:00</lastmod>
+    <lastmod>2014-10-07T21:58:19-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

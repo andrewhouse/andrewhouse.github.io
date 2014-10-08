@@ -91,6 +91,65 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/10/07/after-the-iron-yard-hackathon/">After: The Iron Yard Hackathon</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-07T21:44:41-04:00" pubdate data-updated="true">Oct 7<sup>th</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>That was intense.<br>
+I had a really fun time this weekend.
+It&rsquo;s amazing how much can be accomplished in such a short amount of time.
+I went into the hackathon with the mindset of building something that would work when it was over.
+I was successful.<br><br>
+Our app was a pseudo dropbox that would be used by businesses and allow clients to
+download/upload files without making an account.
+I took the task of scrumming together a work flow for my team for the weekend,
+gathering input from a couple of the pitchers.
+Because of this, we never had a situation where we asked what was next.
+At the end, I was told that I looked and acted like a project manager.
+ Also, our app looked like an enterprise worthy application,
+and was planned and built accordingly.
+That was a pretty nice ego boost, to get feedback from strangers that my
+techniques in building and managing and application are very effective.<br><br>
+Working with a front end developer and an IOS developer was very fun.
+Being able to cultivate my data to tailor their needs was different.
+Our front end developer was very fresh to The Iron Yard (2 weeks in)
+and was a stellar developer.
+I took the time Saturday to teach him Haml and he took to it quickly(major props to you Dean).
+Being on a team like that was worth the whole weekend to me.
+To be around minds who also had a thirst for knowldge and had a different perspective on everything.
+I look at things very logically, they had a much better perspective on design and user expereience.
+I had a great team and more importantly had an absolute blast.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/10/03/before-the-iron-yard-hackathon/">Before: The Iron Yard Hackathon</a></h1>
     
     
@@ -640,104 +699,6 @@ Each feature is in its own a great challenge, and without challenges life is bor
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/29/crazy-easy-gravatars/">Crazy Easy Gravatars</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-29T14:24:22-04:00" pubdate data-updated="true">Aug 29<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/chrislloyd/gravtastic">Gravtastic</a> saves a ton of headaches when wanting a gravatar.<br>
-In 4 lines of code (seriously 4) I had a gravatar up and running on my app.
-Here&rsquo;s how. <br></p>
-
-<h3>Getting Started</h3>
-
-
-<p>Keep in mind, gravtastic relies on Devise to work. So all of the instructions are
-to be used after Devise is setup.<br>
-Go ahead and add the gem gravtastic to your Gemfile.</p>
-
-<figure class='code'><figcaption><span>Gemfile</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;gravtastic&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><br>
-As always, make sure to bundle after installing a gem.</p>
-
-<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">bundle</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><br></p>
-
-<h3>Implementation</h3>
-
-
-<p>Now we need to make sure our model uses gravtastic. Your file may be different
-depending on what you named your devise model.
-I&rsquo;m going to name mine User and generate the code on that premise.</p>
-
-<figure class='code'><figcaption><span>app/models/user.rb</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-</span><span class='line'>  <span class="kp">include</span> <span class="no">Gravtastic</span>
-</span><span class='line'>  <span class="n">gravtastic</span>
-</span><span class='line'>  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
-</span><span class='line'><span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><br>
-With that gravtastic has been able to hook into your devise model. Hooray!
-The last job is rendering the gravatar to the view.<br>
-I&rsquo;m using Haml, so the html syntax may be weird. If you&rsquo;re using Erb, just
-replace the = with &lt;%= and end the line with %></p>
-
-<figure class='code'><figcaption><span>app/views/whicheverview.html.haml</span><a href='https://github.com/chrislloyd/gravtastic'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="p">=</span><span class="n">image_tag</span> <span class="n">current_user</span><span class="o">.</span><span class="n">gravatar_url</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><br>
-That&rsquo;s it!<br>
-Now a gravatar should be rendering on your page.
-If you want to adjust the size you can pass a size option on gravtastic in the model.
-The specifics of different options to use can be found on
-the <a href="https://github.com/chrislloyd/gravtastic">Gravtastic Github Page</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/2">&larr; Older</a>
@@ -753,6 +714,10 @@ the <a href="https://github.com/chrislloyd/gravtastic">Gravtastic Github Page</a
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/10/07/after-the-iron-yard-hackathon/">After: The Iron Yard Hackathon</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/03/before-the-iron-yard-hackathon/">Before: The Iron Yard Hackathon</a>
       </li>
     
@@ -766,10 +731,6 @@ the <a href="https://github.com/chrislloyd/gravtastic">Gravtastic Github Page</a
     
       <li class="post">
         <a href="/blog/2014/09/17/intro-to-omniauth/">Intro to Omniauth</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/11/security-with-rails/">Security With Rails</a>
       </li>
     
   </ul>
