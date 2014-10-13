@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: The Ironyard | House of Rails]]></title>
+  <link href="http://andrewhouse.github.io/blog/categories/the-ironyard/atom.xml" rel="self"/>
+  <link href="http://andrewhouse.github.io/"/>
+  <updated>2014-10-13T08:02:29-04:00</updated>
+  <id>http://andrewhouse.github.io/</id>
+  <author>
+    <name><![CDATA[Andrew House]]></name>
+    <email><![CDATA[andrewhouse621@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Final Week]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/10/13/final-week/"/>
+    <updated>2014-10-13T07:52:55-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/10/13/final-week</id>
+    <content type="html"><![CDATA[<p>It is my last week at The Iron Yard.<br>
+It feels like the last 11 weeks have flown by, mainly because I have been having a ridiculous amount of fun.
+I have been stressed, anxious, and nervous.
+Learning how to cope with all is part of being a developer.
+To take the negative feelings and look beyond them.
+<br>&ldquo;Why am I feeling stressed? I guess it&rsquo;s because I&rsquo;m having a hard time getting this to work.&rdquo;<br>
+Understanding yourself and the root of your feelings can be a driving force.
+After understanding the stress, I can redirect it into a thirst for knowledge.<br>
+<br>
+I&rsquo;ll be happy and sad after my demo day is done.
+Happy that I had completed the course to the best of my abilities, learning so many different things.
+Sad that the environment that I have been in, everyone giving 100% to learn, will be over.
+But alas!
+A new chapter will start, with great people with great purposes.
+Life is pretty cool if you give it a chance.</p>
+]]></content>
+  </entry>
+  
+</feed>
