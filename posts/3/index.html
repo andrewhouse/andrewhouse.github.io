@@ -9,9 +9,9 @@
   <meta name="author" content="Andrew House">
 
 
-<meta name="description" content="Being entirely void of creativity, the Twitter Bootstrap Rails Gem
-is amazing.
-I use Twitter Bootstrap(bootstrap for short) to generate basic layouts &hellip;">
+<meta name="description" content="Once upon a time when I didn&rsquo;t know what I was doing.
+I was trying to setup a rails app for my wife and have her family upload
+images and a &hellip;">
 
 
   <!-- http://t.co/dKP3o1e -->
@@ -86,6 +86,74 @@ I use Twitter Bootstrap(bootstrap for short) to generate basic layouts &hellip;"
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/14/figaro/">Figaro</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-14T10:12:31-04:00" pubdate data-updated="true">Aug 14<sup>th</sup>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Once upon a time when I didn&rsquo;t know what I was doing.<br>
+I was trying to setup a rails app for my wife and have her family upload
+images and a birthday message.
+After some research, I decided to use Amazon Web Services to host my images.
+I got it configured in my rails app with Paperclip and that is when I made
+a fatal, fatal, fatal error.<br><br>
+I put in my bucketname and password directly into my code.<br><br>
+The following morning, I received a call from Amazon.
+Confirming whether I had setup 5 instances across the world racking up $250
+overnight.<br>
+I freaked out a little.<br>
+After getting that resolved, I searched for how I can avoid making that
+stupid mistake again.
+My research turned up a gem called <strong>Figaro</strong>.<br>
+<a href="https://github.com/laserlemon/figaro">Figaro</a> is used to hide confidential information.
+Usernames, passwords, you name it and it will store the variables in a file
+that will be automatically ignored from git and can easily be configured
+for <a href="http://heroku.com">Heroku</a>. <br></p>
+
+<h3>Getting Started</h3>
+
+
+<p>As always, you want to start by adding Figaro to your Gemfile.</p>
+
+<figure class='code'><figcaption><span>Gemfile</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;figaro&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/08/14/figaro/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -555,55 +623,6 @@ into the back-end. <br></p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/08/05/pry-ing-apart-code/">Pry-ing Apart Code</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-08-05T20:36:37-04:00" pubdate data-updated="true">Aug 5<sup>th</sup>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I like to think of writing code similar to designing puzzles.
-The more simple the code, the easier to dissect each individual element and
-know the code with exact precision.
-However, I have a fondness for diving deep into code I don&rsquo;t understand.
-One of my favorite things to do is to find a method on ruby-docs that I know
-nothing about, and pick it apart piece by piece.
-Originally, I used mass amounts of puts and tabbing back and forth between
-my editor and irb. During my first day at the IronYard my Instructor James
-introduced me to Pry. <br><br></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/08/05/pry-ing-apart-code/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/posts/4">&larr; Older</a>
@@ -621,6 +640,10 @@ introduced me to Pry. <br><br></p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/10/16/the-day-before-demo-day/">The Day Before Demo Day</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/13/final-week/">Final Week</a>
       </li>
     
@@ -634,10 +657,6 @@ introduced me to Pry. <br><br></p>
     
       <li class="post">
         <a href="/blog/2014/09/25/preparing-for-my-final-project/">Preparing for My Final Project</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/21/omniauth-logging-in-with-google/">Omniauth - Logging in With Google</a>
       </li>
     
   </ul>

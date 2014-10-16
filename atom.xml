@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-10-13T08:02:29-04:00</updated>
+  <updated>2014-10-16T08:42:06-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,37 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Day Before Demo Day]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/10/16/the-day-before-demo-day/"/>
+    <updated>2014-10-16T08:23:07-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/10/16/the-day-before-demo-day</id>
+    <content type="html"><![CDATA[<p>I woke up surprisingly energetic this morning.<br>
+I think it is because I feel prepared and excited to give my demo.
+The amount of work that has gone into my final project at The Iron Yard has been intense.
+The last two weeks I&rsquo;ve worked mostly 10+ hours a day sorting out everything I wanted.
+Starting by building an app from scratch, to a finished/polished product that is in working condition.
+That was one thing that I wanted from my final project.
+Not an app that had hard coded information, or tweaked just for our presentation.
+But a real, live, working application that can be used with minimal difficulty.<br><br>
+I have had a ridiculous amount of fun these last couple of weeks.
+Digging into code, building something that was entirely based on my skill, and being able to show it off to others.
+I feel like I&rsquo;m on cloud 9.
+It&rsquo;s really a great thing that I scrum&rsquo;d out my workflow as to set specific goals in a timely manner.
+I would be freaking out if I still had to work on code today.
+It has been stressful, meeting personal deadlines, not knowing how the end product will turn out.
+I feel confident now.
+My work is great and it is an uplifting feeling to create something by yourself that is a presentable product.
+<br><br>
+My next post will detail the application that I built.
+I&rsquo;ll go over why I built it and for who.
+Also I&rsquo;ll post the link for the app and my github.
+<br><br>
+Many thanks to the folks at The Iron Yard.
+It&rsquo;s been a blast.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Final Week]]></title>
@@ -1055,161 +1086,6 @@ Something different I did in this that I had never done before was implementing
 a has_many_through relationship.
 It required me to do quite a bit of reading to see how each piece interacted,
 but in the end it was totally worth it.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Figaro]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/08/14/figaro/"/>
-    <updated>2014-08-14T10:12:31-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/08/14/figaro</id>
-    <content type="html"><![CDATA[<p>Once upon a time when I didn&rsquo;t know what I was doing.<br>
-I was trying to setup a rails app for my wife and have her family upload
-images and a birthday message.
-After some research, I decided to use Amazon Web Services to host my images.
-I got it configured in my rails app with Paperclip and that is when I made
-a fatal, fatal, fatal error.<br><br>
-I put in my bucketname and password directly into my code.<br><br>
-The following morning, I received a call from Amazon.
-Confirming whether I had setup 5 instances across the world racking up $250
-overnight.<br>
-I freaked out a little.<br>
-After getting that resolved, I searched for how I can avoid making that
-stupid mistake again.
-My research turned up a gem called <strong>Figaro</strong>.<br>
-<a href="https://github.com/laserlemon/figaro">Figaro</a> is used to hide confidential information.
-Usernames, passwords, you name it and it will store the variables in a file
-that will be automatically ignored from git and can easily be configured
-for <a href="http://heroku.com">Heroku</a>. <br></p>
-
-<h3>Getting Started</h3>
-
-
-<p>As always, you want to start by adding Figaro to your Gemfile.</p>
-
-<figure class='code'><figcaption><span>Gemfile</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;figaro&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<!-- more -->
-
-
-<p><em>Note: Always run bundle after changing your gemfile</em><br><br>
-Next we will bundle our gems for use.</p>
-
-<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">bundle</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>Note: bundle is shorthand for bundle install.</em><br></p>
-
-<h3>Generating and Using Figaro Logic</h3>
-
-
-<p>The Figaro gem comes with a generator that will have rails install the
-<em>&lsquo;./config/application.yml&rsquo;</em> file, and add it to the git ignore list.</p>
-
-<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">figaro install</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>UPDATE: with the new version of Figaro, the old &lsquo;rails g figaro:install&rsquo; command
-no longer works. Use the new &lsquo;figaro install&rsquo; to get application.yml and ignored.</em><br>
-<em>Note: g is short for generate.</em><br><br>
-Now it&rsquo;s time for the magic.<br>
-Open up <em>&lsquo;./config/application.yml&rsquo;</em>.
-I&rsquo;ll be assuming that you are trying to setup a mailer and need your Gmail
-username and password.</p>
-
-<figure class='code'><figcaption><span>config/application.yml</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="n">testdummy</span><span class="vi">@gmail</span><span class="o">.</span><span class="n">com</span>
-</span><span class='line'><span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">password123456</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>These files are now able to be accessed via
-<a href="http://www.ruby-doc.org/core-2.1.2/ENV.html">Environment Variables</a>.
-Environment variables can be called in any of your rails files.
-Normally, you can access Environment Variables one way.</p>
-
-<figure class='code'><figcaption><span>Ruby Code</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">ENV</span><span class="o">[</span><span class="s2">&quot;GMAIL_USERNAME&quot;</span><span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>Note: All Caps are critical.</em><br><br>
-This will render <em>testdummy@gmail.com</em> wherever the environment variable is
-envoked.
-A way of calling environment variables through Figaro is to use their syntax.</p>
-
-<figure class='code'><figcaption><span>Ruby Code</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Figaro</span><span class="o">.</span><span class="n">env</span><span class="o">.</span><span class="n">gmail_username</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Now instead of caps, brackets, and quotations; it is a simple method call.</p>
-
-<h3>Multiple Environments</h3>
-
-
-<p>Figaro allows the use of different variables in different environments.
-For example, in the Gmail example; let&rsquo;s say you want to have a test email
-address for development, but a special email account for production emails.
-For figaro it&rsquo;s a simple setup.</p>
-
-<figure class='code'><figcaption><span>config/application.yml</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="ss">development</span><span class="p">:</span>
-</span><span class='line'>  <span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="n">testdummy</span><span class="vi">@gmail</span><span class="o">.</span><span class="n">com</span>
-</span><span class='line'>  <span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">password123456</span>
-</span><span class='line'><span class="ss">production</span><span class="p">:</span>
-</span><span class='line'>  <span class="ss">GMAIL_USERNAME</span><span class="p">:</span> <span class="n">superawesome</span><span class="vi">@gmail</span><span class="o">.</span><span class="n">com</span>
-</span><span class='line'>  <span class="ss">GMAIL_PASSWORD</span><span class="p">:</span> <span class="n">W</span><span class="vg">$aIk91</span><span class="err">@</span><span class="mi">45</span><span class="o">*</span><span class="n">lkM</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><em>Note: The indentation is critical.</em><br><br>
-That is all.<br>
-Figaro and Rails will know which environment you&rsquo;re in and use that particular
-username and password.</p>
-
-<h3>Setting up for Heroku</h3>
-
-
-<p>Let&rsquo;s say that you are wanting to deploy your app through Heroku, but don&rsquo;t know
-how the environment variables can be setup on the remote server.<br>
-No fear!<br>
-A simple command and figaro will take care of it for you.</p>
-
-<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">rake figaro:heroku</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>BOOM.<br>
-Your environment variables have been setup on Heroku.
-If you wanted to confirm that they&rsquo;re setup all nice and tidy.
-After deploying to heroku, <a href="https://devcenter.heroku.com/articles/config-vars">type in the command</a>.</p>
-
-<figure class='code'><figcaption><span>Terminal</span><a href='https://github.com/laserlemon/figaro'>link</a></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='console'><span class='line'><span class="go">heroku config</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Go Play!</h3>
-
-
-<p>Now figaro has been installed on your Rails app, you can deploy easily to heroku,
-and your information has not been compromised.
-I&rsquo;d call that a pretty good day.</p>
 ]]></content>
   </entry>
   
