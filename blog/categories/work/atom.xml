@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Work | House of Rails]]></title>
   <link href="http://andrewhouse.github.io/blog/categories/work/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-10-16T08:42:06-04:00</updated>
+  <updated>2014-10-18T09:19:05-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Demo Day: Aftershock]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/10/18/demo-day-aftershock/"/>
+    <updated>2014-10-18T08:56:17-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/10/18/demo-day-aftershock</id>
+    <content type="html"><![CDATA[<p>I came, I saw, and it was awesome.<br>
+All of my fellow Rails classmates did amazing.
+It was so much fun watching everyone go up and present their final projects.
+Not a single person lacked passion and love for their project.
+I have a lot of pride in my project, <a href="http://pricetimate.com">Pricimate</a>.<br><br>
+The idea for my project came from my wife.
+She&rsquo;s in touch with the artistic community and knew that there was a void for new artists.<br>
+They don&rsquo;t know how to price their works of art for sell.<br>
+So I made that my mission. <strong>Help Artists Price Their Work</strong>
+I proceeded to scrum out what my wife/client believed to be important, calculated my story points for each, and found my priority list.<br>
+For MVP, I got all of my basic features working in Rails.
+But that wasn&rsquo;t good enough, I needed more dynamic features, so I proceeded to work in AngularJS.
+In the end, my app worked exactly how I wanted it to.
+<br><br>
+I practiced my presentation many, many, many times.
+Being 100% prepared was essential for me.
+Stumbling, forgetting where I was, or skipping a few sentences were not things I was going to do.<br>
+And I nailed it.<br>
+We had 6 minutes alloted for presentations; Mine was 5:57 (we had a timer on our podium).
+I felt like I had complete confidence in my app because I prepared as much as I did.
+People had engaging questions after my presenations, like what I had to offer was very interesting to them.
+More importantly, in intermission I had three people come up and directly compliment my app, offer their direct feedback(which was great) and wanted to know my current employment status.<br>
+I was floating.<br><br>
+I had so much fun at The Iron Yard.<br>
+Would definitely recommend it to anyone who wanted to learn an insane amount of content in a short amount of time.
+It requires dedication. You will get out what you put into it.
+Being satisfied by getting the work done isn&rsquo;t enough.
+You have to push yourself and take what is given and throw it up a couple of levels.<br>
+Don&rsquo;t like the page having refresh over and over? Use Ajax, or something like AngularJS.<br>
+The beginning Ruby assignments seem easy to you? Write tests for them, or throw up your work on sinatra. <br>
+There are countless things to do to push learning to the absolute maximum, and it all falls on your dedication.
+I loved every bit of being there, I don&rsquo;t regret a day I spent at The Iron Yard.
+I feel 100% confident I can solve many complex problems I don&rsquo;t have the answer to, and that is because of my training.
+Now the job hunt begins, and I don&rsquo;t feel like it&rsquo;ll be too stressful because of how much weight the name &ldquo;The Iron Yard&rdquo; holds.
+<br>
+Life is pretty great when you push yourself.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Day Before Demo Day]]></title>
@@ -128,41 +172,6 @@ There is always something to do.
 Code can always be smaller, faster, and more efficient.
 It&rsquo;s my job to find a perfect balance between those and the time it takes
 to write the code.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Breaking the Norm]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/09/02/breaking-the-norm/"/>
-    <updated>2014-09-02T21:23:54-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/09/02/breaking-the-norm</id>
-    <content type="html"><![CDATA[<p>I have been living in a state of being uncomfortable.<br>
-It&rsquo;s a weird feeling.
-Always having to look up resources, reading articles, and watching videos.<br>
-It is constant learning.<br>
-At first, this style was incredibly uneasy.
-I would feel constantly anxious and stressed.
-Why didn&rsquo;t I have the answers?
-Why was I having such a hard time finding answers?
-There is a great skill in asking the right questions, and a very valuable lesson
-I learned.
-I think my next blog post will be how to google 101, or googling for rails dummies.
-The evolution of my ability to see through what problem I am facing and
-being able to search for that specific problem has been astonishing.
-I&rsquo;m starting to transition from being uneasy all the time to enjoying the hunt.<br><br>
-Where are the answers?<br>
-Which answer is the best for my needs?<br>
-Can I tweak the answer to get better results?<br><br>
-I feel like this is a great mentality to have.
-To be always improving is what it takes to be a developer.
-Breaking my old ways of doing what it is easy, digging into the trenches,
-and putting some sweat equity into me.
-It&rsquo;s a pretty rewarding feeling.
-Looking at myself from the outside in and noticing a change.
-I am so glad that I am coding.
-It truly was a life altering choice to come to The Iron Yard.
-Not only will I become a badass Rails Dev, but I will also be closer to
-my true self.</p>
 ]]></content>
   </entry>
   

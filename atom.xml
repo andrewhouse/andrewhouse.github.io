@@ -4,7 +4,7 @@
   <title><![CDATA[House of Rails]]></title>
   <link href="http://andrewhouse.github.io/atom.xml" rel="self"/>
   <link href="http://andrewhouse.github.io/"/>
-  <updated>2014-10-16T08:42:06-04:00</updated>
+  <updated>2014-10-18T09:19:05-04:00</updated>
   <id>http://andrewhouse.github.io/</id>
   <author>
     <name><![CDATA[Andrew House]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Demo Day: Aftershock]]></title>
+    <link href="http://andrewhouse.github.io/blog/2014/10/18/demo-day-aftershock/"/>
+    <updated>2014-10-18T08:56:17-04:00</updated>
+    <id>http://andrewhouse.github.io/blog/2014/10/18/demo-day-aftershock</id>
+    <content type="html"><![CDATA[<p>I came, I saw, and it was awesome.<br>
+All of my fellow Rails classmates did amazing.
+It was so much fun watching everyone go up and present their final projects.
+Not a single person lacked passion and love for their project.
+I have a lot of pride in my project, <a href="http://pricetimate.com">Pricimate</a>.<br><br>
+The idea for my project came from my wife.
+She&rsquo;s in touch with the artistic community and knew that there was a void for new artists.<br>
+They don&rsquo;t know how to price their works of art for sell.<br>
+So I made that my mission. <strong>Help Artists Price Their Work</strong>
+I proceeded to scrum out what my wife/client believed to be important, calculated my story points for each, and found my priority list.<br>
+For MVP, I got all of my basic features working in Rails.
+But that wasn&rsquo;t good enough, I needed more dynamic features, so I proceeded to work in AngularJS.
+In the end, my app worked exactly how I wanted it to.
+<br><br>
+I practiced my presentation many, many, many times.
+Being 100% prepared was essential for me.
+Stumbling, forgetting where I was, or skipping a few sentences were not things I was going to do.<br>
+And I nailed it.<br>
+We had 6 minutes alloted for presentations; Mine was 5:57 (we had a timer on our podium).
+I felt like I had complete confidence in my app because I prepared as much as I did.
+People had engaging questions after my presenations, like what I had to offer was very interesting to them.
+More importantly, in intermission I had three people come up and directly compliment my app, offer their direct feedback(which was great) and wanted to know my current employment status.<br>
+I was floating.<br><br>
+I had so much fun at The Iron Yard.<br>
+Would definitely recommend it to anyone who wanted to learn an insane amount of content in a short amount of time.
+It requires dedication. You will get out what you put into it.
+Being satisfied by getting the work done isn&rsquo;t enough.
+You have to push yourself and take what is given and throw it up a couple of levels.<br>
+Don&rsquo;t like the page having refresh over and over? Use Ajax, or something like AngularJS.<br>
+The beginning Ruby assignments seem easy to you? Write tests for them, or throw up your work on sinatra. <br>
+There are countless things to do to push learning to the absolute maximum, and it all falls on your dedication.
+I loved every bit of being there, I don&rsquo;t regret a day I spent at The Iron Yard.
+I feel 100% confident I can solve many complex problems I don&rsquo;t have the answer to, and that is because of my training.
+Now the job hunt begins, and I don&rsquo;t feel like it&rsquo;ll be too stressful because of how much weight the name &ldquo;The Iron Yard&rdquo; holds.
+<br>
+Life is pretty great when you push yourself.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Day Before Demo Day]]></title>
@@ -1059,33 +1103,6 @@ Once I get a good feeling of the flow of Angular, I&rsquo;m probably going to tr
 implement it into my <a href="http://tiy-homework.herokuapp.com">The Iron Yard Homework App</a>.
 I know it will be a long road to get a feeling of the flow of Angular JS, but I
 feel like in the end, it will be a valuable skill to have.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Homework App]]></title>
-    <link href="http://andrewhouse.github.io/blog/2014/08/18/homework-app/"/>
-    <updated>2014-08-18T15:40:16-04:00</updated>
-    <id>http://andrewhouse.github.io/blog/2014/08/18/homework-app</id>
-    <content type="html"><![CDATA[<p>I built an app which some of my fellow students can use as a medium to give
-progress on their homework assignments.<br>
-<a href="http://tiy-homework.herokuapp.com">My App</a> uses Devise for registering users,
-Heroku as the means for depoloyment, and a vast array of fun gems.
-The whole point of the app is that there is a central place where our teacher
-(James Dabbs) can check our homework progress.
-James is the only authorized user (admin) capable of making new assignments.
-Then each student can update the status of their homework by selecting a created
-assignment, post the link of their website, and check to see if the assignment
-has been completed.<br><br>
-I think it works pretty well, all of the CSS was done with the help of
-<a href="http://getbootstrap.com/">Twitter Bootstrap</a>. If you are interested in
-checking out my code, I have it posted on <a href="https://github.com/andrewhouse/TIY-Homework-Checker">Github</a>.
-<br>
-But yea, making apps are fun. I had a lot of challenges in this app.
-Something different I did in this that I had never done before was implementing
-a has_many_through relationship.
-It required me to do quite a bit of reading to see how each piece interacted,
-but in the end it was totally worth it.</p>
 ]]></content>
   </entry>
   
